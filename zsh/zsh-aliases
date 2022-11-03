@@ -1,0 +1,14 @@
+
+#!/bin/sh
+
+# alias for neovim
+alias vim="nvim"
+
+# basic command alias, ls -G display LSCOLORS
+# other options: lsd (ls icon plugin command)
+# >> brew install lsd 
+# alias ls="lsd --group-dirs first"
+# alias ll="lsd -Alh"
+alias ls="ls -G"
+alias ll="ls -lG"
+
