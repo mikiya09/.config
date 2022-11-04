@@ -38,6 +38,6 @@ Temporary Items
 
 # directories that don't need to push
 karabiner
-
+plugins
 
 # End of https://www.toptal.com/developers/gitignore/api/macos

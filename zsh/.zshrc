@@ -53,4 +53,3 @@ zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 source '/opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme'
 
 
-

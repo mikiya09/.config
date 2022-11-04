@@ -111,6 +111,7 @@ Add shortcuts for the following apps
 | global |
 ----------
     • Preferences...                    --> shift + ctrl + enter
+    • New Window                        --> cmd + shift + n
     • Tile Window to Left of Screen     --> ctrl + `
     • Print...                          --> ctrl + cmd + p
     • Open File...                      --> shfit + cmd + o
@@ -277,9 +278,10 @@ echo "export ZDOTDIR=$HOME/.config/zsh" >> $HOME/.zprofile
 # powerlevel10k (before you know howb to write your own prompt use this)
 
 >> brew install romkatv/powerlevel10k/powerlevel10k
->> echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.config/zsh/.zshrc
+>> echo "source '$(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme'" >> ~/.config/zsh/.zshrc
 >> cd zsh 
 >> git clone "...zsh_directory_in_github_repo..."
+>> if the syntax highlighting and autocomplete or any other plugin is not working, remove them and reinstall
 ```
 **[+] LSCOLORS**
 ```

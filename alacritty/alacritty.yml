@@ -1,0 +1,238 @@
+
+
+# sample reference 
+# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
+
+# env TERM variable 
+env:
+  TERM: xterm-256color
+
+working_directory: "/Users/mikiya/wormhole/ComSci/"
+
+# ======================================================= Color ====================================================
+colors:
+
+  # default color 
+  primary:
+    background: '#121212'
+    foreground: '#D8DEE9'
+
+  # cursor color
+  cursor: 
+    text: '#D8DEE9'
+    cursor: '#D8DEE9'
+
+  # search color 
+  search:
+    matches: 
+      foreground: '#000000'
+      background: '#ffffff'
+
+    focused_match:
+      foreground: '#100E23'
+      background: '#D8DEE9'
+
+  # selection color 
+  selection:
+    text: '#000000'
+    background: '#ffffff'
+
+
+  # normal color 
+  normal:
+    black: '#100E23'
+    red: '#ab1c0f' 
+    # red: '#a51c24'
+    green: '#5cd484'
+    yellow: '#F2B482'
+    blue: '#7aa2f7'
+    magenta: '#A37ACC'
+    cyan: '#91DDFF'
+    white: '#D8DEE9'
+
+  # Bright colors
+  bright:
+    black: '#3E3859'
+    red: '#ff757f'
+    # green: '#4fd6be'
+    green: '#A1EFD3'
+    yellow: '#FFE6B3'
+    blue: '#65B2FF'
+    magenta: '#D4BFFF'
+    cyan: '#63F2F1'
+    white: '#ffffff'
+
+# ======================================================== Font ================================================================
+font:
+  normal:
+    family: SauceCodePro Nerd Font
+    style: Light
+    
+  # italic:
+  #   family: SauceCodePro Nerd Font 
+  #   style: Italic
+
+  # the extra space around each character
+  # offset.y could be thought of as modifying the line spacing
+  # offset.x for letter spacing
+  offset:
+    x: 1
+    y: 1
+
+  size: 14.0
+
+
+
+# ===================================================== window dimension ==================================================
+window:
+  
+  # dimensions
+  dimensions:
+    columns: 210
+    lines: 75
+
+  # position on the screen, later can be replaced by window manager
+  # position:
+    # x: 0
+    # y 0
+
+  # padding on display content
+  padding:
+    x: 6
+    y: 1
+
+  # spread additional padding evenly around the terminal content: no 
+  dynamic_padding: false
+
+  # background opacity 
+  opacity: 0.98
+
+  # decorations of the top bar
+  decorations: buttonless
+
+  # window title 
+  title: JoJo
+
+
+# scrolling 
+scrolling:
+  history: 5000
+
+# ======================================================== cursor style =============================================================
+
+# when select the text with cursor
+selection:
+  # This is string contains all characters that are used as separators for "semantic words"
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # when set to 'true', selected text will be copied to the primary clipboard 
+  save_to_clipboard: true
+
+# cursor
+cursor:
+  style:
+    shape: Underline
+
+    # cursor blinking state
+    blinking: On
+
+  # vi-mode-style 
+  vi_mode_style: Underline
+
+  # Cursor blinking interval in milliseconds
+  blink_interval: 500
+
+  # spcifying '0' will disable timeout for blinking 
+  # right it will stop after blinking 3 sec
+  blink_timeout: 3
+
+  # if setting to true
+  # the cursor will be rendered as a hollow box when the window is not focused
+  unfocused_hollow: true
+
+  # thickness of the cursor relative to the cell width as floating point value
+  thickness: 0.2
+
+
+
+# ===================================================== Keying Binding =======================================================
+# mods: 
+#   - Command 
+#   - Control 
+#   - Option 
+#   - Super 
+#   - Shift 
+#   - Alt
+
+# how does the computer detect the keystroke and react to it?
+#   + by hex code, each key is binded with a unique hexcode
+#   + therefore, by mapping certain key to express the same hexcode value could achieve the effect of key mapping
+#   + alacritty provide this feature through chars values
+#
+# how to get the hex code? at least on Mac
+#   + get out of tmux 
+#  >> xxd -psd
+#   + after pressing some key in this mode, and enter, corresponding hexcode will be returned
+#   + right now the prefix key is ctrl+B in tmux 
+#   + find hex code of shortcut keymap in tmux, and map with new shortcut
+
+key_bindings:
+
+  # ----------------------------------------------------------------------------------
+  # split the current pane left and right: prefix + %
+  - { key: N, mods: Command, chars: "\x01\x25" }
+  # split the current pane top and down: prefix + "
+  - { key: B, mods: Command, chars: "\x01\x22" }
+  # Type <escape>:w<enter> == autosave in neovim 
+  - { key: S, mods: Command, chars: "\x1b\x3a\x77\x0a" }
+  # rename the current session: prefix + $ 
+  - { key: R, mods: Control, chars: "\x01\x24" }  
+  # source tmux.conf file
+  # - { prefix + r }
+  # Copy & Paste
+  # : because inside neovim option.lua has a setup that share the clipboard with MacOS
+  # : yy can be used to cmd + v
+  # so not need to map copy and paste right now 
+
+  # ----------------------------------------------------------------------------------
+  # Window 
+  # new tmux window: 
+  - { key: T, mods: Command, chars: "\x01\x63" }
+  # kill current pane: prefix + x
+  - { key: W, mods: Command, chars: "\x01\x78" }
+  # detach current session: prefix + d 
+  - { key: D, mods: Control, chars: "\x01\x64" }
+  # select a tmux session to attach while inside tmux(p as preview): prefix + w 
+  - { key: P, mods: Command, chars: "\x01\x77" }
+
+  # ----------------------------------------------------------------------------------
+  # comment command: gcc (from neovim plugin)
+  - { key: Slash, mods: Command, chars: "\x67\x63\x63" }
+
+
+  # ----------------------------------------------------------------------------------
+  # navigate with prefix + arrow_key
+  # cmd + down
+  - { key: J, mods: Command, chars: "\x01\x1b\x5b\x42" }
+  # cmd + up
+  - { key: K, mods: Command, chars: "\x01\x1b\x5b\x41" }
+  # cmd + left
+  - { key: H, mods: Command, chars: "\x01\x1b\x5b\x44" }
+  # cmd + right
+  - { key: L, mods: Command, chars: "\x01\x1b\x5b\x44" }
+  # select window 1-9
+  - { key: Key1, mods: Command, chars: "\x01\x31" }
+  - { key: Key2, mods: Command, chars: "\x01\x32" }
+  - { key: Key3, mods: Command, chars: "\x01\x33" }
+  - { key: Key4, mods: Command, chars: "\x01\x34" }
+  - { key: Key5, mods: Command, chars: "\x01\x45" }
+
+
+
+
+
+
+
+
+
