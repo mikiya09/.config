@@ -222,11 +222,11 @@ brew install --cask alacritty
 ```
 
 ### ➐  Configuration Files
-**[+] [alacritty.yml](https://github.com/mikiya09/envSetup/blob/master/alacritty/alacritty.yml)**
+**[+] [alacritty.yml](../alacritty/alacritty.yml)**
 ```
 vim ~/.config/alacritty/alacritty.yml
 ```
-**[+] [tmux.conf](https://github.com/mikiya09/envSetup/blob/master/tmux/tmux.conf)**
+**[+] [tmux.conf](../tmux/tmux.conf)**
 ```
 vim ~/.config/tmux/tmux.conf
 ```
@@ -320,6 +320,7 @@ mkdir xiron
 ```
 brew install numi --cask
 brew install keycastr --cask
+brew install cmatrix
 ```
 
 ### &#x24ed; openssl

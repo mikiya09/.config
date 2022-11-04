@@ -57,26 +57,42 @@ vim.cmd[[colorscheme tokyonight]]
 --  fg = "#D8DEE9"
 --  ["@include"] = { fg = "#A1EFD3" },
 --  ["@string"] = { fg = "#FFE6B3" },
---  ["@keyword"] = { fg = "#A37ACC" },                                              -- For keywords that don't fall in previous categories
---  ["@keyword.function"] = { fg = "#A37ACC" },                                     -- const
---  ["@keyword.operator"] = { fg = "#A37ACC" },                                     -- new / delete
---  ["@namespace"] = { fg = c.fg, underline = true },
+--  ["@string.regex"] = { fg = "#FFE6B3" },
+--  ["@string.escape"] = { fg = "#FFE6B3" },
+--  ["@keyword"] = { fg = "#A37ACC" },                                          -- For keywords that don't fall in previous categories
+--  ["@keyword.function"] = { fg = "#A37ACC" },                                 -- const
+--  ["@keyword.operator"] = { fg = "#A37ACC" },                                 -- new / delete
+--  ["@keyword.return"] = { fg = "#A37ACC" },
+--  ["@namespace"] = { fg = "#DBDEE9", underline = true },
 --  ["@type"] = { fg = "#ff757f" },
---  ["@parameter"] = { fg = c.fg },
+--  ["@type.builtin"] = { fg = "#ff757f" },                                     -- ?
+--  ["@type.definition"] = { fg = "#ff757f" },                                  -- Typedef
+--  ["@type.qualifier"] = { fg = "#ff757f" },
+--  ["@parameter"] = { fg = "#DBDEE9" },
+--  ["@parameter.reference"] = { fg = "#DBDEE9" },
 --  ["@comment"] = { fg = "#3E3859", italic = true },
 --  ["@repeat"] = { fg = "#A37ACC" },
 --  ["@conditional"] = { fg = "#A37ACC" },
 --  ["@function"] = { fg = "#7aa2f7" },
+--  ["@function.builtin"] = { fg = "#7aa2f7" },
+--  ["@function.call"] = { fg = "#7aa2f7" },
+--  ["@function.macro"] = { fg = "#7aa2f7" },
 --  ["@operator"] = { fg = "#7aa2f7" },
---  ["@punctuation.delimiter"] = { fg = c.fg },                                     -- semi-colon or dots
---  ["@punctuation.bracket"] = { fg = c.fg },                                       -- brackets and parens
---  ["@punctuation.special"] = { fg = c.blue5 },                                    -- special punctutation
---  ["@variable"] = { fg = c.fg },                                                  -- user defined variable
---  ["@variable.builtin"] = { fg = "#ff757f" },                                     -- variables defined by the languages, like `this` or `self`
+--  ["@punctuation.delimiter"] = { fg = "#DBDEE9" },                            -- semi-colon or dots
+--  ["@punctuation.bracket"] = { fg = "#DBDEE9" },                              -- brackets and parens
+--  ["@punctuation.special"] = { fg = "#7aa2f7" },                              -- special punctutation
+--  ["@variable"] = { fg = "#DBDEE9" },                                         -- user defined variable
+--  ["@variable.builtin"] = { fg = "#ff757f" },                                 -- variables defined by the languages, like `this` or `self`
 --  ["@boolean"] = { fg = "#4fd6be" },
---  ["@number"] = { fg = c.fg },                                                    -- backup: #4fd6be | #62D196
+--  ["@number"] = { fg = "#DBDEE9" },                                           -- backup: #4fd6be | #62D196
+--  ["@float"] = { fg = "#DBDEE9" },
 --  ["@constructor"] = { fg = "#91DDFF" },
---  ["@property"] = { fg = "#4fd6be" },                                             -- private data member
+--  ["@property"] = { fg = "#4fd6be" },                                         -- private data member
+--  ["@constant"] = { fg = "#7aa2f7" },
+--  ["@constant.builtin"] = { fg = "#7aa2f7" },
+--  ["@constant.macro"] = { fg = "#7aa2f7" },
+--  ["@exception"] = { fg = "#ff757f" },
+--  ["@tag"] = { fg = "#A37ACC" },                                              -- html ?
 
 
 ------------------------------------------------------ SETUP for my own colorscheme in the future --------------------------------------------------
