@@ -370,7 +370,6 @@ brew install --cask amethyst
     + systemPreference
     + reminders
     + wechat
-    + notability
     + ...
 
 2) Mouse
@@ -399,8 +398,14 @@ brew install --cask amethyst
     + swap focused window to counter clockwise screen:      --> control + option + shift + H
     + swap focused window to clockwise screen:              --> control + option + shift + L
     + select main layout(currently is 3columns):            --> control + option + cmd + M
+    + select Column Layout:                                 --> control + option + shift + N
+    + select Row Layout:                                    --> control + option + shift + B
     + relauch Amethyst                                      --> control + option + cmd + Z
-    + ...more to setup...
+    + ...more to setup...(throw screen n, focus screen n)   --> for now just use mouse
+
+6) different screen/desktop could have different layouyt (I guess, not certain)
+    >> go to the long vertical one, and use shortcut to setup the Row Layout
+    >> it's just need to manually specify each time
 ```
 
 ### &#x23f5; VimTex
@@ -427,7 +432,6 @@ brew install --cask amethyst
 *generate pdf through command line*
 ```
 >> pdflatex xxx.tex 
-
 ```
 *inside .tex file*
 ```
