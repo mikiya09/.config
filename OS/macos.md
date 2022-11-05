@@ -357,11 +357,11 @@ brew uninstall speedtest --force
 # &#x238b; Necessary Installation
 
 ### &#x23f5; Window Management 
-**install Amethyst and enable accessibility features**
+**install [Amethyst](https://github.com/ianyh/Amethyst) and enable accessibility features**
 ```
 brew install --cask amethyst
 ```
-**preference setting**
+*preference setting*
 ```
 1) Floating (add the following)
     + AppStore 
