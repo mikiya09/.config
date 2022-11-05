@@ -18,10 +18,12 @@ require("xiron.basic.init-vim")
 --++ extra .lua ++--
 require("xiron.extra.hexColorPreview")
 
-require("xiron.extra.comment")      -- gc 9j: comment out 9 lines
+require("xiron.extra.comment")                  --> gc 9j: comment out 9 lines
 
-require("xiron.extra.nvim-tree")    -- open Toggle, under directory enter a for creating new file,
-                                    -- add / at the end indicating the creation of new directory
+
+require("xiron.extra.nvim-tree")                --> Toggle -> under directory -> enter a (for add new file/dir)
+                                                --> add / at the end (= mkdir dir)
+
 require("xiron.extra.lualine")
 
 require("xiron.extra.telescope")
@@ -33,6 +35,8 @@ require("xiron.extra.autopairs")
 require("xiron.extra.toggleterm")
 
 require("xiron.extra.cmp")
+
+require("xiron.extra.VimTex")                   --> VimTex plugin for .tex file
 
 --[[ require("xiron.extra.lsp")          -- lsp is a directory, but we have init.lua inside, which will be called automatically ]]
 

@@ -158,7 +158,7 @@ brew uninstall/remove xxx
 ```
 
 **Install Homebrew [Natively](./homebrew_natively.md) (e.g. users in China)** <br>
-*check [this](https://github.com/mikiya09/envSetup)*<br>---------------------------------------------------------
+<br>---------------------------------------------------------
 
 ### ➌  Karabiner (virtual keyboard)
 **[+] before hand**
@@ -341,11 +341,11 @@ echo 'export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"' >> ~/.config/zsh/
 ```
 >> node --version
 >> npm --version
->> sudo npm install -g mapscii
 ```
 
 ### &#x24ef; Entertainment
 ```
+>> sudo npm install -g mapscii      # require node.js installed
 brew install cointop
 brew install bpytop 
 brew tap teamookla/speedtest
@@ -382,6 +382,58 @@ brew uninstall speedtest --force
 >> conda info -e 
 >> conda activate tensorflow
 {...more on his repo...}
+```
+
+
+### VimTex
+**[VimTex Repo](https://github.com/lervag/vimtex)**
+**[Guide](https://www.ejmastnak.com/tutorials/vim-latex/intro.html)**
+
+*compiler is needed, but you don't have to install the whole MaxTex*
+```
+>> brew install --cask mactex-no-gui
+or 
+>> brew install --cask basictex
+also in the plugin.lua
+>> use 'lervag/vimtex'
+
+------------------------------------
+[check]:
+>> latexmk 
+>> pdflatex
+
+------------------------------------
+[generate pdf]:
+>> pdflatex xxx.tex 
+
+------------------------------------
+[inside .tex file]:
+:echo g:vimtex_view_enabled
+```
+*PDF preview plugin*
+```
+>> brew install --cask skim
+
+[+] add the following line into VimTex.lua for setting up skim as default previewer (because it can live update)
+    for translating from vimscript to lua refer to options.lua
+
+>> vim.g['vimtex_view_method'] = 'skim'
+```
+*[mapping shortcut](https://www.ejmastnak.com/tutorials/vim-latex/vimtex.html#options)*
+```
+[normal mode]:
+--------------
+dse: Delete surrounding environments(\begin{} and \end{}
+
+cse: Change surrounding environments(change what's in bracket)
+
+..map them with alacritty..
+```
+
+*basic command*
+```
+:VimtexCompile    -- for compile .tex file to pdf
+:
 ```
 
 ### &#x23f5; Pytorch

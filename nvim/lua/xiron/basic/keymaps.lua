@@ -50,13 +50,15 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>m", ":MarkdownPreview<CR>", opts)
 
 
+-- VimTex Compile 
+keymap("n", "<leader>r", ":VimtexCompile<CR>", opts)
+
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)      -- find file in the current directory
 keymap("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts)       -- find text in the current directory
 keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts)     -- find current string cursor is on
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)         -- show active buffer
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)       -- show help text
-
 
 
 -- Visual --

@@ -72,6 +72,7 @@ return packer.startup(function(use)
 -- gcc & gc comment 
 -- (gc 9j: comment out 9 lines) 
     use 'numToStr/Comment.nvim'  
+    use "JoosepAlviste/nvim-ts-context-commentstring"
 
 -- nvimtree (file explorer)
     use "nvim-tree/nvim-tree.lua"
@@ -118,11 +119,14 @@ return packer.startup(function(use)
     use { "rafamadriz/friendly-snippets" }  -- a bunch of snippets to use
 
 
--- markdown file preview
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
+-- markdown file 
+    use({ "iamcco/markdown-preview.nvim", 
+        run = "cd app && npm install", 
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end, 
+        ft = { "markdown" }, })
+
+-- VimTex
+    use 'lervag/vimtex'
 
 --------------------- LSP -----------------------
 
@@ -135,8 +139,6 @@ return packer.startup(function(use)
 -------------------------------------------------
 
 
-  -- ?
-  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- optional folder: loaded with command(lazyload), separate in another folder, keep it clean 
   -- format {'user/repo', opt = true, cmd = {'xxx', 'xxx', 'xxx'}}

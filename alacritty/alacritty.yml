@@ -181,6 +181,7 @@ cursor:
 key_bindings:
 
   # ----------------------------------------------------------------------------------
+  # general keymapping
   # split the current pane left and right: prefix + %
   - { key: N, mods: Command, chars: "\x01\x25" }
   # split the current pane top and down: prefix + "
@@ -195,6 +196,12 @@ key_bindings:
   # : because inside neovim option.lua has a setup that share the clipboard with MacOS
   # : yy can be used to cmd + v
   # so not need to map copy and paste right now 
+  # ----------------------------------------------------------------------------------
+  # VimTex shortcut 
+  # delete surrounding environments
+  - { key: D, mods: Option, chars: "\x64\x73\x65" } 
+  # change surrounding environments
+  - { key: C, mods: Option, chars: "\x63\x73\x65" }
 
   # ----------------------------------------------------------------------------------
   # Window 
