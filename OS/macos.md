@@ -357,11 +357,11 @@ brew uninstall speedtest --force
 # &#x238b; Necessary Installation
 
 ### &#x23f5; Window Management 
-**install [Amethyst](https://github.com/ianyh/Amethyst) and enable accessibility features**
+**[+] install [Amethyst](https://github.com/ianyh/Amethyst) and enable accessibility features**
 ```
 brew install --cask amethyst
 ```
-*preference setting*
+*[+] preference setting*
 ```
 1) Floating (add the following)
     + AppStore 
@@ -412,7 +412,7 @@ brew install --cask amethyst
 **[VimTex Repo](https://github.com/lervag/vimtex)**
 **[Guide](https://www.ejmastnak.com/tutorials/vim-latex/intro.html)**
 
-*compiler is needed, but you don't have to install the whole MaxTex*
+*[+] compiler is needed, but you don't have to install the whole MaxTex*
 ```
 # option that I had tried
 >> brew install --cask mactex-no-gui
@@ -423,30 +423,27 @@ brew install --cask amethyst
 # also inside plugin.lua 
 >> use 'lervag/vimtex'
 ```
-*check if successfully installed*
+*[+] check if successfully installed*
 ```
 >> latexmk 
 >> pdflatex
 ```
 
-*generate pdf through command line*
+*[+] generate pdf through command line*
 ```
 >> pdflatex xxx.tex 
 ```
-*inside .tex file*
+*[+] inside .tex file*
 ```
 :echo g:vimtex_view_enabled
 ```
-*PDF preview plugin*
+*[+] PDF preview plugin* <br>
+*[+] add the configuration to VimTex.lua setting skim as default preview app*
 ```
 >> brew install --cask skim
-
-[+] add the following line into VimTex.lua for setting up skim as default previewer (because it can live update)
-    for translating from vimscript to lua refer to options.lua
-
->> vim.g['vimtex_view_method'] = 'skim'
+>> echo "vim.g['vimtex_view_method'] = 'skim'" >> ~/.config/nvim/lua/xiron/extra/VimTex.lua
 ```
-*[mapping shortcut](https://www.ejmastnak.com/tutorials/vim-latex/vimtex.html#options)*
+*[+] [mapping shortcut](https://www.ejmastnak.com/tutorials/vim-latex/vimtex.html#options)*
 ```
 [normal mode]:
 --------------
@@ -457,7 +454,7 @@ cse: Change surrounding environments(change what's in bracket)
 ..map them with alacritty..
 ```
 
-*basic command*
+*[+] basic command*
 ```
 # compile .tex file to pdf -> mapped with <leader>r
 :VimtexCompile
