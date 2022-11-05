@@ -356,6 +356,112 @@ brew uninstall speedtest --force
 
 # &#x238b; Necessary Installation
 
+### &#x23f5; Window Management 
+**install Amethyst and enable accessibility features**
+```
+brew install --cask amethyst
+```
+**preference setting**
+```
+1) Floating (add the following)
+    + AppStore 
+    + FontBook
+    + Terminal (default one)
+    + systemPreference
+    + reminders
+    + wechat
+    + notability
+    + ...
+
+2) Mouse
+    + check resize windows using mouse
+    + check swap windows using mouse
+
+3) Layouts
+    + add 3 Column Middle
+
+4) General 
+    + window margins enable 
+        • 15px 
+    + smart window enable 
+    + screen padding 
+        • all set to 15px for now
+
+5) Shortcut (farthest-left window is the main pane by default) 
+    + shrink main pane:                                     --> control + shift + H
+    + expand main pane:                                     --> control + shift + L 
+    + move focus to main window:                            --> control + shift + M
+    + move focus counter clockwise:                         --> control + shift + k
+    + move focus clockwise:                                 --> control + shift + J 
+    + swap the focused window with main window:             --> control + shift + enter
+    + swap focused window to counter clockwise:             --> control + option + shift + K
+    + swap focused window to clockwise:                     --> control + option + shift + J
+    + swap focused window to counter clockwise screen:      --> control + option + shift + H
+    + swap focused window to clockwise screen:              --> control + option + shift + L
+    + select main layout(currently is 3columns):            --> control + option + cmd + M
+    + relauch Amethyst                                      --> control + option + cmd + Z
+    + ...more to setup...
+```
+
+### &#x23f5; VimTex
+**[VimTex Repo](https://github.com/lervag/vimtex)**
+**[Guide](https://www.ejmastnak.com/tutorials/vim-latex/intro.html)**
+
+*compiler is needed, but you don't have to install the whole MaxTex*
+```
+# option that I had tried
+>> brew install --cask mactex-no-gui
+
+# other option
+>> brew install --cask basictex
+
+# also inside plugin.lua 
+>> use 'lervag/vimtex'
+```
+*check if successfully installed*
+```
+>> latexmk 
+>> pdflatex
+```
+
+*generate pdf through command line*
+```
+>> pdflatex xxx.tex 
+
+```
+*inside .tex file*
+```
+:echo g:vimtex_view_enabled
+```
+*PDF preview plugin*
+```
+>> brew install --cask skim
+
+[+] add the following line into VimTex.lua for setting up skim as default previewer (because it can live update)
+    for translating from vimscript to lua refer to options.lua
+
+>> vim.g['vimtex_view_method'] = 'skim'
+```
+*[mapping shortcut](https://www.ejmastnak.com/tutorials/vim-latex/vimtex.html#options)*
+```
+[normal mode]:
+--------------
+dse: Delete surrounding environments(\begin{} and \end{}
+
+cse: Change surrounding environments(change what's in bracket)
+
+..map them with alacritty..
+```
+
+*basic command*
+```
+# compile .tex file to pdf -> mapped with <leader>r
+:VimtexCompile
+
+# 
+:
+```
+
 ### &#x23f5; Install Python environment
 **[+] silicon difference**
 ```
@@ -382,58 +488,6 @@ brew uninstall speedtest --force
 >> conda info -e 
 >> conda activate tensorflow
 {...more on his repo...}
-```
-
-
-### VimTex
-**[VimTex Repo](https://github.com/lervag/vimtex)**
-**[Guide](https://www.ejmastnak.com/tutorials/vim-latex/intro.html)**
-
-*compiler is needed, but you don't have to install the whole MaxTex*
-```
->> brew install --cask mactex-no-gui
-or 
->> brew install --cask basictex
-also in the plugin.lua
->> use 'lervag/vimtex'
-
-------------------------------------
-[check]:
->> latexmk 
->> pdflatex
-
-------------------------------------
-[generate pdf]:
->> pdflatex xxx.tex 
-
-------------------------------------
-[inside .tex file]:
-:echo g:vimtex_view_enabled
-```
-*PDF preview plugin*
-```
->> brew install --cask skim
-
-[+] add the following line into VimTex.lua for setting up skim as default previewer (because it can live update)
-    for translating from vimscript to lua refer to options.lua
-
->> vim.g['vimtex_view_method'] = 'skim'
-```
-*[mapping shortcut](https://www.ejmastnak.com/tutorials/vim-latex/vimtex.html#options)*
-```
-[normal mode]:
---------------
-dse: Delete surrounding environments(\begin{} and \end{}
-
-cse: Change surrounding environments(change what's in bracket)
-
-..map them with alacritty..
-```
-
-*basic command*
-```
-:VimtexCompile    -- for compile .tex file to pdf
-:
 ```
 
 ### &#x23f5; Pytorch
