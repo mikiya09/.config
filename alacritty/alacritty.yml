@@ -81,7 +81,7 @@ font:
     x: 1
     y: 1
 
-  size: 13.0
+  size: 14.0
 
 
 
@@ -90,7 +90,7 @@ window:
   
   # dimensions
   dimensions:
-    columns: 210
+    columns: 230
     lines: 75
 
   # position on the screen, later can be replaced by window manager

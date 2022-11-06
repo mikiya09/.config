@@ -5,6 +5,13 @@ https://www.youtube.com/watch?v=DYYxLSrJdW8
 ```
 
 
+# iPad Pro SHH Setup - TMUX
+```
+https://www.youtube.com/watch?v=B-1wGwvUwm8
+
+```
+
+
 # Windows Manager
 **Yabai**
 ```

@@ -110,7 +110,6 @@ Add shortcuts for the following apps
 ----------
 | global |
 ----------
-    • Preferences...                    --> shift + ctrl + enter
     • New Window                        --> cmd + shift + n
     • Tile Window to Left of Screen     --> ctrl + `
     • Print...                          --> ctrl + cmd + p
