@@ -24,6 +24,7 @@ pointer control -> trackpad options -> enable dragging -> three finger drag
 ```
 1) set it automatically show
 2) position it on anywhere other than bottom
+3) go to the bottom for hot corner, setup screen saver
 ```
 
 ### &#x2464; Control Center
@@ -110,11 +111,18 @@ Add shortcuts for the following apps
 ----------
 | global |
 ----------
+    • Open Location...                  --> ctrl + l
     • New Window                        --> cmd + shift + n
     • Tile Window to Left of Screen     --> ctrl + `
     • Print...                          --> ctrl + cmd + p
     • Open File...                      --> shfit + cmd + o
     • Minimize                          --> ctrl + cmd + option + M
+
+-----------------
+| shortcut tips |
+-----------------
+    • command + shift leftArrow
+    • 
 
 [how to restore minimized one ? don't ask me]
 ```
@@ -178,11 +186,12 @@ brew install karabiner-elements --cask
     • map "caps_lock" to "left_control"
 
 2) Mapping website: https://ke-complex-modifications.pqrs.org/
-    • Vi style arrow: ctrl + hjkl 
+    • Vi style arrow
     • click import 
     • import 
     • ok 
-    • enable (only enable control + hjkl)
+    • enable (only enable command + hjkl)
+    • is command not control anymore
 
 3) Search for any other combination you want
    {...}
@@ -355,58 +364,6 @@ brew uninstall speedtest --force
 
 # &#x238b; Necessary Installation
 
-### &#x23f5; Window Management 
-**[+] install [Amethyst](https://github.com/ianyh/Amethyst) and enable accessibility features**
-```
-brew install --cask amethyst
-```
-*[+] preference setting*
-```
-1) Floating (add the following)
-    + AppStore 
-    + FontBook
-    + Terminal (default one)
-    + systemPreference
-    + reminders
-    + wechat
-    + ...
-
-2) Mouse
-    + check resize windows using mouse
-    + check swap windows using mouse
-
-3) Layouts
-    + add 3 Column Middle
-
-4) General 
-    + window margins enable 
-        • 15px 
-    + smart window enable 
-    + screen padding 
-        • all set to 15px for now
-
-5) Shortcut (farthest-left window is the main pane by default) 
-    + shrink main pane:                                     --> control + shift + H
-    + expand main pane:                                     --> control + shift + L 
-    + move focus to main window:                            --> control + shift + M
-    + move focus counter clockwise:                         --> control + shift + k
-    + move focus clockwise:                                 --> control + shift + J 
-    + swap the focused window with main window:             --> control + shift + enter
-    + swap focused window to counter clockwise:             --> control + option + shift + K
-    + swap focused window to clockwise:                     --> control + option + shift + J
-    + swap focused window to counter clockwise screen:      --> control + option + shift + H
-    + swap focused window to clockwise screen:              --> control + option + shift + L
-    + select main layout(currently is 3columns):            --> control + option + cmd + M
-    + select Column Layout:                                 --> control + option + shift + N
-    + select Row Layout:                                    --> control + option + shift + B
-    + relauch Amethyst                                      --> control + option + cmd + Z
-    + ...more to setup...(throw screen n, focus screen n)   --> for now just use mouse
-
-6) different screen/desktop could have different layouyt (I guess, not certain)
-    >> go to the long vertical one, and use shortcut to setup the Row Layout
-    >> it's just need to manually specify each time
-```
-
 ### &#x23f5; VimTex
 **[VimTex Repo](https://github.com/lervag/vimtex)**
 **[Guide](https://www.ejmastnak.com/tutorials/vim-latex/intro.html)**
@@ -460,6 +417,58 @@ cse: Change surrounding environments(change what's in bracket)
 
 # 
 :
+```
+
+### &#x23f5; Window Management 
+**[+] install [Amethyst](https://github.com/ianyh/Amethyst) and enable accessibility features**
+```
+brew install --cask amethyst
+```
+*[+] preference setting*
+```
+1) Floating --> choose automatically float all applications except those listed
+    + Alacritty
+    + Google Chrome
+    + Notability
+    + Safari
+    + Preview (MacOS pdf)
+    + Skim
+    + ...
+
+2) Mouse
+    + check resize windows using mouse
+    + check swap windows using mouse
+
+3) Layouts
+    + add 3 Column Middle
+
+4) General 
+    + window margins enable 
+        • 15px 
+    + smart window enable 
+    + screen padding 
+        • all set to 10px for now
+
+5) Shortcut (farthest-left window is the main pane by default) 
+    + shrink main pane:                                     --> control + shift + H
+    + expand main pane:                                     --> control + shift + L 
+    + move focus to main window:                            --> control + shift + M
+    + move focus counter clockwise:                         --> control + shift + k
+    + move focus clockwise:                                 --> control + shift + J 
+    + swap the focused window with main window:             --> control + shift + enter
+    + swap focused window to counter clockwise:             --> control + option + shift + K
+    + swap focused window to clockwise:                     --> control + option + shift + J
+    + swap focused window to counter clockwise screen:      --> control + option + shift + H
+    + swap focused window to clockwise screen:              --> control + option + shift + L
+    + select main layout(currently is 3columns):            --> control + option + cmd + M
+    + select Column Layout:                                 --> control + option + shift + N
+    + select Row Layout:                                    --> control + option + shift + B
+    + relauch Amethyst                                      --> control + option + cmd + Z
+    + ...more to setup...(throw screen n, focus screen n)   --> for now just use mouse
+
+6) different screen/desktop could have different layouyt (I guess, not certain)
+    >> go to the long vertical one, and use shortcut to setup the Row Layout
+    >> it's just need to manually specify each time
 ```
 
 ### &#x23f5; Install Python environment

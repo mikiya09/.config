@@ -81,7 +81,7 @@ font:
     x: 1
     y: 1
 
-  size: 14.0
+  size: 12.0
 
 
 
@@ -220,15 +220,15 @@ key_bindings:
 
 
   # ----------------------------------------------------------------------------------
-  # navigate with prefix + arrow_key
+  # navigate with prefix + arrow_key inside tmux 
   # cmd + down
-  - { key: J, mods: Command, chars: "\x01\x1b\x5b\x42" }
+  - { key: J, mods: Control, chars: "\x01\x1b\x5b\x42" }
   # cmd + up
-  - { key: K, mods: Command, chars: "\x01\x1b\x5b\x41" }
+  - { key: K, mods: Control, chars: "\x01\x1b\x5b\x41" }
   # cmd + left
-  - { key: H, mods: Command, chars: "\x01\x1b\x5b\x44" }
+  - { key: H, mods: Control, chars: "\x01\x1b\x5b\x44" }
   # cmd + right
-  - { key: L, mods: Command, chars: "\x01\x1b\x5b\x44" }
+  - { key: L, mods: Control, chars: "\x01\x1b\x5b\x43" }
   # select window 1-9
   - { key: Key1, mods: Command, chars: "\x01\x31" }
   - { key: Key2, mods: Command, chars: "\x01\x32" }
