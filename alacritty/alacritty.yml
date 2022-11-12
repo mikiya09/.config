@@ -189,7 +189,7 @@ key_bindings:
   # Type <escape>:w<enter> == autosave in neovim 
   - { key: S, mods: Command, chars: "\x1b\x3a\x77\x0a" }
   # rename the current session: prefix + $ 
-  - { key: R, mods: Control, chars: "\x01\x24" }  
+  - { key: R, mods: Command, chars: "\x01\x24" }  
   # source tmux.conf file
   # - { prefix + r }
   # Copy & Paste
@@ -210,7 +210,7 @@ key_bindings:
   # kill current pane: prefix + x
   - { key: W, mods: Command, chars: "\x01\x78" }
   # detach current session: prefix + d 
-  - { key: D, mods: Control, chars: "\x01\x64" }
+  - { key: D, mods: Command, chars: "\x01\x64" }
   # select a tmux session to attach while inside tmux(p as preview): prefix + w 
   - { key: P, mods: Command, chars: "\x01\x77" }
 

@@ -9,6 +9,6 @@
 ## [Linux](./OS/linux.md)
 
 
-## [More to add](./OS/list.md)
-
+## [More to configure](./OS/list.md)
+**what is the highlight groups for "NULL" value**
 
