@@ -16,6 +16,9 @@ pointer control -> trackpad options -> enable dragging -> three finger drag
 **+ left with:** 
 ```
 1) finder 
+    + open finder 
+    + go to view -> Show Path bar 
+    + ctrl + click the icon on the path bar for copying the path
 2) safari 
 3) system preference
 ```

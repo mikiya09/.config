@@ -38,6 +38,8 @@ require("xiron.extra.cmp")
 
 require("xiron.extra.VimTex")                   --> VimTex plugin for .tex file
 
+require("xiron.extra.mdPreview")
+
 --[[ require("xiron.extra.lsp")          -- lsp is a directory, but we have init.lua inside, which will be called automatically ]]
 
 --++ end ++--

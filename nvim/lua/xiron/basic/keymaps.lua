@@ -48,6 +48,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Markdown File Preview
 keymap("n", "<leader>m", ":MarkdownPreview<CR>", opts)
+keymap("n", "<leader>mm", ":MarkdownPreviewStop<CR>", opts)
 
 
 -- VimTex Compile 
@@ -77,30 +78,4 @@ keymap("i", "<C-s>", "<ESC>", opts)
 
 ---------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
--- Neovim Split -- (replacement for tmux, when tmux break) --
--- split for horizontal split, vsplit for vertical split
--- when you need to specific which file to split to the new window, you type the name of that file
--- if you have to navigate the file in other directory, you type the path to that file
--- during navigating path, use tab for autocomplete, when selecting directory in autocomplete list, arrow key down means confirm; tab means next
--- remember that arrow down could be represented with Ctrl + j
-
--- Navigation --
--- original <C-w> + <arrow key>
--- swap left and right, up and down: <C-w> + <R>
--- the following is the remap navigation to use shfit, and it's also valid command navigating between nerdtree and actually file
---[[ keymap("n", "<S-h>", "<C-w>h", opts)
-keymap("n", "<S-j>", "<C-w>j", opts)
-keymap("n", "<S-k>", "<C-w>k", opts)
-keymap("n", "<S-l>", "<C-w>l", opts) ]]
--- https://www.youtube.com/watch?v=Zir28KFCSQw&t=251s
 
