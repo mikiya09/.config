@@ -136,6 +136,11 @@ _G.packer_plugins = {
     path = "/Users/mikiya/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/Users/mikiya/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/mikiya/.local/share/nvim/site/pack/packer/start/nvim-autopairs",

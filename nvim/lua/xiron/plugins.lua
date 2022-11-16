@@ -128,6 +128,9 @@ return packer.startup(function(use)
 -- VimTex
     use 'lervag/vimtex'
 
+-- Neoscroll: smooth scrolling plugin 
+    use 'karb94/neoscroll.nvim'
+
 --------------------- LSP -----------------------
 
     --[[ use { "neovim/nvim-lspconfig" }                 -- enable  ]]

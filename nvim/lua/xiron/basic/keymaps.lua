@@ -52,7 +52,7 @@ keymap("n", "<leader>mm", ":MarkdownPreviewStop<CR>", opts)
 
 
 -- VimTex Compile 
-keymap("n", "<leader>r", ":VimtexCompile<CR>", opts)
+keymap("n", "<leader>c", ":VimtexCompile<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)      -- find file in the current directory
