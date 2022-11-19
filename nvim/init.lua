@@ -18,11 +18,9 @@ require("xiron.basic.init-vim")
 --++ extra .lua ++--
 require("xiron.extra.hexColorPreview")
 
-require("xiron.extra.comment")                  --> gc 9j: comment out 9 lines
+require("xiron.extra.comment")
 
-
-require("xiron.extra.nvim-tree")                --> Toggle -> under directory -> enter a (for add new file/dir)
-                                                --> add / at the end (= mkdir dir)
+require("xiron.extra.nvim-tree")
 
 require("xiron.extra.lualine")
 
@@ -36,7 +34,7 @@ require("xiron.extra.toggleterm")
 
 require("xiron.extra.cmp")
 
-require("xiron.extra.VimTex")                   --> VimTex plugin for .tex file
+require("xiron.extra.VimTex")
 
 require("xiron.extra.mdPreview")
 
@@ -46,6 +44,15 @@ require("xiron.extra.neoScrolling")
 
 --++ end ++--
 
+
+
+-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ plugin Manual @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+-- [1] comment 
+-- gc 9j: comment out 9 lines 
+
+-- [2] nvimTree
+-- equivalent to touch command: when inside toggle window --> under directory --> type a 
+-- equivalent to mkdir command: when inside toggle window --> under directory --> type a --> add / at the end of the path will make new name as a directory
 
 
 
@@ -64,3 +71,11 @@ require("xiron.extra.neoScrolling")
 -- r + [char for replacement]:          replace character
 -- shift + i:                           insert at the begining
 -- shift + a:                           insert at the end
+
+
+-- for navigation of pop-up windows like nvimTree and VimTex compile windows 
+-- ctrl + w + w                         cycle though all windows 
+-- ctrl + w + h                         left window 
+-- ctrl + w + j                         down window 
+-- ctrl + w + k                         up window 
+-- ctrl + w + l                         right window

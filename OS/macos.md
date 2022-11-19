@@ -7,6 +7,10 @@
 ```
 choose sacle -> more space -> night shift 
 ```
+**+ as host machine**
+```
+-> find prevent automatic sleeping on power adapter when the display is off
+```
 ### &#x2461; Enable three finger drag
 **+ accessibility:** 
 ```
