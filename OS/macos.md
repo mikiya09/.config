@@ -372,8 +372,8 @@ brew uninstall speedtest --force
 # &#x238b; Necessary Installation
 
 ### &#x23f5; VimTex
-**[VimTex Repo](https://github.com/lervag/vimtex)**
-**[Guide](https://www.ejmastnak.com/tutorials/vim-latex/intro.html)**
+##### &#x25cf; VimTex [Repo](https://github.com/lervag/vimtex) 
+##### &#x25cf; Guide -> [learnCS repo](https://github.com/mikiya09/learnCS/tree/main/LaTex)
 
 *[+] compiler is needed, but you don't have to install the whole MaxTex*
 ```
