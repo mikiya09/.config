@@ -8,7 +8,7 @@
 env:
   TERM: xterm-256color
 
-working_directory: "/Users/mikiya/wormhole/ComSci/"
+working_directory: "/Users/mikiya/wormhole/Data/"
 
 # ======================================================= Color ====================================================
 colors:
