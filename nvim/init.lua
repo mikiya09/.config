@@ -56,6 +56,15 @@ require("xiron.extra.neoScrolling")
 
 
 
+-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ normal text editor shortcut  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+-- ctrl + a:                            move to the begining of a line 
+-- ctrl + e:                            move to the end of a line 
+-- option + backspace:                  delete characters to the left of the insertion point (meaning one at each)
+--
+
+
+
 -- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ neovim shortcut @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 -- shift + s:                           delete the whole line, and enter insert mode
@@ -71,6 +80,7 @@ require("xiron.extra.neoScrolling")
 -- r + [char for replacement]:          replace character
 -- shift + i:                           insert at the begining
 -- shift + a:                           insert at the end
+-- ctrl + w:                            delete a whole word (also work fine in command line)
 
 
 -- for navigation of pop-up windows like nvimTree and VimTex compile windows 
