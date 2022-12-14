@@ -60,7 +60,7 @@ require("xiron.extra.neoScrolling")
 
 -- ctrl + a:                            move to the begining of a line 
 -- ctrl + e:                            move to the end of a line 
--- option + backspace:                  delete characters to the left of the insertion point (meaning one at each)
+-- option + backspace:                  group_setdelete characters to the left of the insertion point (meaning one at each)
 --
 
 
