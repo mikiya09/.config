@@ -9,7 +9,7 @@ choose sacle -> more space -> night shift
 ```
 **+ as host machine**
 ```
--> find prevent automatic sleeping on power adapter when the display is off
+-> advanced -> find prevent automatic sleeping on power adapter when the display is off
 ```
 ### &#x2461; Enable three finger drag
 **+ accessibility:** 
@@ -97,7 +97,7 @@ hover
 **+ App Shortcut**
 ```
 click "+"
-Add shortcuts for the following apps
+Add shortcuts for the following apps (setup alacritty later)
 
 -------------
 | Alacritty |
@@ -163,8 +163,6 @@ echo '# homebrew' >> $HOME/.zprofile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 ```
 
-
-
 **[+] Basic Commands with brew**
 ```
 brew install xxx
@@ -174,11 +172,17 @@ brew uninstall/remove xxx
 **Install Homebrew [Natively](./homebrew_natively.md) (e.g. users in China)** <br>
 <br>---------------------------------------------------------
 
-### ➌  Karabiner (virtual keyboard)
-**[+] before hand**
+### ➌  Terminal Emulator
 ```
-git clone '{.config file}' first, otherwise it will be messy up with git branch later
+brew install --cask alacritty
 ```
+*>> open /* <br>
+*>> drag disk and user to the side bar of finder* <br>
+*>> remove document from side bar* <br>
+*>> replace hide alacritty command "cmd+h" in shortcut*
+
+
+### ➍  Karabiner (virtual keyboard)
 **[+] install karabiner**
 ```
 brew install karabiner-elements --cask
@@ -202,9 +206,11 @@ brew install karabiner-elements --cask
 
 3) Search for any other combination you want
    {...}
+
+4) All these setting will be saved in karabiner folder in .config
 ```
   
-### ➍  Nerd Font
+### ➎  Nerd Font
 **[+] go to [nerdfont](https://github.com/ryanoasis/nerd-fonts)**
 ```
 1) patched-fonts folder
@@ -220,13 +226,7 @@ ex).
 • do the italic one as well
 ```
 
-### ➎  Terminal Emulator
-```
-brew install --cask alacritty
-```
-*>> open /* <br>
-*>> drag disk and user to the side bar of finder* <br>
-*>> remove document from side bar* <br>
+
 
 ### ➏  Install Tmux
 ```
@@ -493,7 +493,7 @@ brew install --cask amethyst
 >> which python 
 [output]: /opt/homebrew/Caskroom/miniforge/base/bin/python
 ```
-**[+] download [.yml file](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install) from Jeff Heaton Repo**
+**[+] download ".yml file" from Jeff Heaton's [Repo](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install)**
 ```
 >> cd ~/[]/ComSci/installation
 
@@ -562,8 +562,8 @@ brew info sfml
 [OK] notability
 [OK] movist
 [OK] cursor Pro
-[OK] xcode (app store)
-[OK] The Unarchiver (app store)
+[?] xcode (app store)
+[?] The Unarchiver (app store)
 [?] parallels
 [?] istats (cost $9/mo, it's your choice, search from website)
 [?] blender
