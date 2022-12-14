@@ -178,8 +178,11 @@
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND="#d52a1a"
+  # red: #d52a1a
   # Custom icon.
-  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='  ➜'
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='  _'
+  #   擄ﲽ  
+  # Ω≈cse√∫˜˜µ≤≥÷÷æ…¬˚∆˙©ƒ∂ßåœ∑´®†¥¨ˆˆøπ“‘≠–ºª•¶§∞§∞¢£™¡
 
   # battery example 
   # typeset -g POWERLEVEL9K_BATTERY_VERBOSE=false
@@ -905,7 +908,7 @@
   # #f5502d
   # typeset -g POWERLEVEL9K_ANACONDA_FOREGROUND=yellow
   typeset -g POWERLEVEL9K_ANACONDA_FOREGROUND="#FFE6B3"
-  typeset -g POWERLEVEL9K_ANACONDA_VISUAL_IDENTIFIER_EXPANSION='(  )'
+  typeset -g POWERLEVEL9K_ANACONDA_VISUAL_IDENTIFIER_EXPANSION='  ->'
   # 
 
   # Anaconda segment format. The following parameters are available within the expansion.
