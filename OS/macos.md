@@ -253,24 +253,24 @@ brew install zsh
 *(.zprofile has higher priority compared to .zshrc in the same directory)*
 ```
 >> vim ~/.zprofile 
------------------------------------------------------------------------------------------------------
-|                                                                                                   |
-|   # scripting                                                                                     |
-|   # used for arranging some low-level operation? Such as which path for which functionality       |
-|   # for example, ~/.zprofile is one of those file                                                 |
-|   # in terms of priority, .zprofile is higher than .zshrc if they are in the same directory       |
-|                                                                                                   |
-|   # ========================================================================================      |
-|   # by exporting ZDOTDIR                                                                          |
-|   # setting setting the path of zsh-shell configuration to ~/.config/zsh                          |
-|   # so then inside the directory we can touch .zshrc file and manage all paths                    |
-|   # variables and all sorts of thing                                                              |
-|                                                                                                   |
-|   # ========================================================================================      |
-|   # reference                                                                                     |
-|   # https://github.com/ChristianChiarulli/Machfiles/blob/master/x/.xprofile                       |
-|                                                                                                   |
------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------
+# |                                                                                                   |
+# |   1) scripting                                                                                    |
+# |   used for arranging some low-level operation? Such as which path for which functionality         |
+# |   for example, ~/.zprofile is one of those file                                                   |
+# |   in terms of priority, .zprofile is higher than .zshrc if they are in the same directory         |
+# |                                                                                                   |
+# |   ========================================================================================        |
+# |   2) by exporting ZDOTDIR                                                                         |
+# |   setting setting the path of zsh-shell configuration to ~/.config/zsh                            |
+# |   so then inside the directory we can touch .zshrc file and manage all paths                      |
+# |   variables and all sorts of thing                                                                |
+# |                                                                                                   |
+# |   ========================================================================================        |
+# |   3) reference                                                                                    |
+# |   https://github.com/ChristianChiarulli/Machfiles/blob/master/x/.xprofile                         |
+# |                                                                                                   |
+# -----------------------------------------------------------------------------------------------------
 
 ```
 **[+] In Command Line**
