@@ -1,14 +1,15 @@
 
 
-# Setup OS
+# &#x25ce; Environment Setup
 
 
-### [MacOS](./OS/macos.md)
+## Mac 
+#### &#x21b3; [macos](./OS/macos.md)
 
+## Linux
+#### &#x21b3; [Linux](./OS/linux.md)
 
-### [Linux](./OS/linux.md)
-
-
-### [More to configure](./OS/list.md)
+## And More
+#### &#x21b3; [to-do List](./OS/list.md)
 **what is the highlight groups for "NULL" value**
 
