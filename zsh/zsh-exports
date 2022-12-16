@@ -21,6 +21,11 @@ conda config --set auto_activate_base false
 # export neovim as editor
 export EDITOR="nvim"
 
+# git 
+export PATH="/opt/homebrew/bin:${PATH}"
+
+# /opt/homebrew/bin/git
+
 # export LS colors
 # preview website: https://geoff.greer.fm/lscolors
 # alias ll="ls -lGH"
