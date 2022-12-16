@@ -388,11 +388,12 @@
     # color specified: https://github.com/romkatv/powerlevel10k/issues/207
     if (( $1 )); then
       # Styling for up-to-date Git status.
-      local       meta='%f'     # default foreground
-      local      clean='%F{magenta}'   	# purple foreground
-      local   modified='%F{red}'  	# red foreground
-      local  untracked='%39F'   	# blue foreground
-      local conflicted='%F{red}'  	# red foreground
+      local       meta='%f'                 # default foreground
+      local      clean='%F{magenta}'   	    # purple foreground
+      local   modified='%F{red}'  	        # red foreground
+      # local  untracked='%F{blue}'           # blue foreground
+      local  untracked='%69F'   	        # blue foreground (color code could only have three char?)
+      local conflicted='%F{yellow}'  	    # red foreground
     else
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground
