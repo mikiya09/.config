@@ -306,7 +306,7 @@ echo 'export LSCOLORS=cxfxexdxbxegedabagacac' >> ~/.config/zsh/.zshrc
 ```
 
 ### ➒  Essential Installation
-##### `+ git`
+##### `>> git`
 ```
 # install through homebrew
 brew install git
@@ -315,12 +315,12 @@ brew install git
 echo 'export PATH="/opt/homebrew/bin:${PATH}"' >> $HOME/.config/zsh/zsh-exports
 ```
 
-##### `+ C++ compiler`
+##### `>> C++ compiler`
 ```
 brew install gcc
 ```
 
-##### `+ Neovim`
+##### `>> Neovim`
 ```
 brew install neovim
 ```
