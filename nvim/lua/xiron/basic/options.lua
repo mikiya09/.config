@@ -26,6 +26,8 @@
 -- for conciseness: access vim global variable, using vim.opt for setting option
 local opt = vim.opt     
 
+
+
 -- line numbers
 opt.relativenumber = true
 opt.number = true
@@ -45,6 +47,9 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
+-- cursor shape
+-- for more shape option -> check documentation file -> :help guicursor
+opt.guicursor='n-c-v:hor20,i:ver10'
 -- cursor line
 opt.cursorline = false
 
@@ -62,8 +67,6 @@ opt.clipboard:append("unnamedplus")
 -- recognize "-" for connecting words
 -- semi-colon is a single string instead of three, ctrl+w will delete them all
 opt.iskeyword:append("-")
-
-
 
 
 

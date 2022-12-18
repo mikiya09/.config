@@ -12,7 +12,6 @@ working_directory: "/Users/mikiya/wormhole/Know/"
 
 # ======================================================= Color ====================================================
 colors:
-
   # default color 
   primary:
     background: '#121212'
