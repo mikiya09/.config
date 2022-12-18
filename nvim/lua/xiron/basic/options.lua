@@ -16,8 +16,9 @@
 -- vim.bo: ~ buffer-scoped options                                                                  |
 -- vim.g:  ~ global variables => usually namespace where you'll find variables set by plugins       |
 -- vimscript:   let g:zoom#statustext = 'Z'                                                         |
+--              set guicursor=n-c-v:hor20,i:ver10                                                   |
 -- lua:         vim.g['zoom#statustext'] = 'Z'                                                      |
---                                                                                                  |
+--              opt.guicursor='n-c-v:hor20,i:ver10'                                                 |
 ----------------------------------------------------------------------------------------------------|
 
 -- ===================================== general setting ============================================
@@ -25,7 +26,6 @@
 
 -- for conciseness: access vim global variable, using vim.opt for setting option
 local opt = vim.opt     
-
 
 
 -- line numbers
