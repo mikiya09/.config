@@ -19,8 +19,8 @@ colors:
 
   # cursor color
   cursor: 
-    text: '#D8DEE9'
-    cursor: '#D8DEE9'
+    text: '#000000'
+    cursor: '#62D196' # the color of text that the cursor is currently on
 
   # search color 
   search:
@@ -62,6 +62,47 @@ colors:
     magenta: '#D4BFFF'
     cyan: '#63F2F1'
     white: '#ffffff'
+
+
+
+# ======================================================== cursor style =============================================================
+
+# when select the text with cursor
+selection:
+  # This is string contains all characters that are used as separators for "semantic words"
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # when set to 'true', selected text will be copied to the primary clipboard 
+  save_to_clipboard: true
+
+# cursor
+cursor:
+  style:
+    shape: Underline
+    # shape: block
+
+    # cursor blinking state
+    blinking: On
+
+  # vi-mode-style 
+  vi_mode_style: Underline
+
+  # Cursor blinking interval in milliseconds
+  blink_interval: 500
+
+  # spcifying '0' will disable timeout for blinking 
+  # right it will stop after blinking 3 sec
+  blink_timeout: 3
+
+  # if setting to true
+  # the cursor will be rendered as a hollow box when the window is not focused
+  unfocused_hollow: true
+
+  # thickness of the cursor relative to the cell width as floating point value
+  thickness: 0.2
+
+
+
 
 # ======================================================== Font ================================================================
 font:
@@ -117,42 +158,8 @@ window:
 
 # scrolling 
 scrolling:
-  history: 5000
+  history: 2000
 
-# ======================================================== cursor style =============================================================
-
-# when select the text with cursor
-selection:
-  # This is string contains all characters that are used as separators for "semantic words"
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-
-  # when set to 'true', selected text will be copied to the primary clipboard 
-  save_to_clipboard: true
-
-# cursor
-cursor:
-  style:
-    shape: Underline
-
-    # cursor blinking state
-    blinking: On
-
-  # vi-mode-style 
-  vi_mode_style: Underline
-
-  # Cursor blinking interval in milliseconds
-  blink_interval: 500
-
-  # spcifying '0' will disable timeout for blinking 
-  # right it will stop after blinking 3 sec
-  blink_timeout: 3
-
-  # if setting to true
-  # the cursor will be rendered as a hollow box when the window is not focused
-  unfocused_hollow: true
-
-  # thickness of the cursor relative to the cell width as floating point value
-  thickness: 0.2
 
 
 

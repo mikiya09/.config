@@ -40,6 +40,10 @@ require("xiron.extra.mdPreview")
 
 require("xiron.extra.neoScrolling")
 
+
+
+
+
 --[[ require("xiron.extra.lsp")          -- lsp is a directory, but we have init.lua inside, which will be called automatically ]]
 
 --++ end ++--
