@@ -19,38 +19,14 @@
 -- lua:         vim.g['zoom#statustext'] = 'Z'                                                      |
 --              opt.guicursor='n-c-v:hor20,i:ver10'                                                 |
 --                                                                                                  |
--- map autocmd from vimscript to lua --                                                             |
--- vimscript:                                                                                       |
--- cmd [[                                                                                           |
---      augroup RestoreCursorShapeOnExit                                                            |
---          autocmd!                                                                                |
---          autocmd VimLeave * set guicursor=a:hor15                                                |
---      augroup END                                                                                 |
--- ]]                                                                                               |
---                                                                                                  |
--- lua:                                                                                             |
--- local agrp = vim.api.nvim_create_augroup                                                         |
--- local acmd = vim.api.nvim_create_autocmd                                                         |
--- local exitCursor = agrp("RestoreCursorShapeOnExit", { clear = true })                            |
--- acmd({ "VimLeave" },                                                                             |
---      { pattern = "*",                                                                            |
---        command = "set guicursor=a:hor10",                                                        |
---        group = exitCursor,})                                                                     |
 ----------------------------------------------------------------------------------------------------|
 
 -- ===================================== general setting ============================================
 
 
 
-
-
-
-
-
 -- for conciseness: access vim global variable, using vim.opt for setting option
 local opt = vim.opt     
-local agrp = vim.api.nvim_create_augroup
-local acmd = vim.api.nvim_create_autocmd
 
 -- line numbers
 opt.relativenumber = true
@@ -91,13 +67,6 @@ opt.clipboard:append("unnamedplus")
 -- recognize "-" for connecting words
 -- semi-colon is a single string instead of three, ctrl+w will delete them all
 opt.iskeyword:append("-")
-
--- leaving neovim and set the cursor style to horizontal shope
-local exitCursor = agrp("RestoreCursorShapeOnExit", { clear = true })
-acmd({ "VimLeave" }, 
-      { pattern = "*",
-        command = "set guicursor=a:hor10",
-        group = exitCursor,})
 
 
 -- ================================== setting for latex ============================================

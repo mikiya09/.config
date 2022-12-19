@@ -15,6 +15,8 @@ require("xiron.basic.colorscheme")
 
 require("xiron.basic.init-vim")
 
+require("xiron.basic.autocmd")
+
 --++ extra .lua ++--
 require("xiron.extra.hexColorPreview")
 

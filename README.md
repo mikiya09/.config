@@ -13,6 +13,6 @@
 
 ## And More
 #### &#x21b3; [to-do List](./OS/list.md)
-**what is the highlight groups for "NULL" value** <br>
-**block cursor is blocking the visibility of text under it in neovim/alacritty** <br> 
-**neovim startup screen**
+**• what is the highlight groups for "NULL" value** <br>
+**• block cursor is blocking the visibility of text under it in neovim/alacritty** <br> 
+**• neovim startup screen**
