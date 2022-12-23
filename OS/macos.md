@@ -508,7 +508,7 @@ brew install --cask amethyst
 ```
 **[+] download ".yml file" from Jeff Heaton's [Repo](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install)**
 ```
->> cd ~/[]/ComSci/installation
+>> cd ~/.../installation
 
 # go to base environment 
 >> conda install -y jupyter 
@@ -516,7 +516,16 @@ brew install --cask amethyst
 >> conda env create -f tersorflow-apple-metal.yml -n tensorflow
 >> conda info -e 
 >> conda activate tensorflow
-{...more on his repo...}
+>> python -m ipykernel install --user --name tensorflow --display-name "Python 3.9 (tensorflow)"
+>> jupyter notebook
+
+# go to his repo copy the code for testing if the GPU is available
+```
+**remove ipykernel name**
+```
+# check kernel list 
+>> jupyter kernelspec list 
+>> jupyter kernelspec uninstall kernel_name
 ```
 
 ### &#x23f5; Pytorch
