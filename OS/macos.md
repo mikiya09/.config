@@ -139,10 +139,20 @@ Add shortcuts for the following apps (setup alacritty later)
 1) Privacy -> uncheck website tracking for enabling cookie
 2) Tabs -> Compact
 ```
-### &#x246b; Modified notification window
+### &#x246b; Notes App 
+```
+make use of this app 
+1) Note -> Setting -> Adjust Font size 
+2) ...
+```
+### &#x246c; Reminder App 
+```
+make use of this app as well
+```
+### &#x246d; Modified notification window
 **{...}**
 
-### &#x246c; Install Alfred
+### &#x246e; Install Alfred
 **{...}**
 
 <br>
