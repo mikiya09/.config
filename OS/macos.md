@@ -158,6 +158,33 @@ make use of this app as well
 <br>
 
 # &#x231b; Terminal Level
+```
+Basic Directory Tree: 
+
+$ cd ~
+$ mkdir "xxx"                           # main directory 
+$ cd "xxx"
+$ mkdir blackhole society toKnow 
+$ cd toKnow 
+$ mkdir ComSci DataSci Package 
+
+
+                                                 "xxx"
+                                                   |
+                                                   |                                    
+                                  -----------------------------------
+                                  |                |                |
+                                  |                |                |
+
+                               toKnow          blackhole         society
+                                  |
+                                  |
+                  ----------------------------------
+                  |               |                |
+                  |               |                |
+
+                ComSci          DataSci         Package 
+```
 
 ### ➊  Install Xcode tool
 ```

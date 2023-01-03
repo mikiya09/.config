@@ -109,11 +109,6 @@ _G.packer_plugins = {
     path = "/Users/mikiya/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/Users/mikiya/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
-  },
   embark = {
     loaded = true,
     path = "/Users/mikiya/.local/share/nvim/site/pack/packer/start/embark",
@@ -123,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/mikiya/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["kabutack.nvim"] = {
+    loaded = true,
+    path = "/Users/mikiya/.local/share/nvim/site/pack/packer/start/kabutack.nvim",
+    url = "https://github.com/mikiya09/kabutack.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -205,11 +205,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/mikiya/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/Users/mikiya/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-solidity"] = {
     loaded = true,

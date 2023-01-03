@@ -1,4 +1,8 @@
 
+
+
+
+
 --------------------------------------------------------------------------------------------------------------
 -- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Pre-Setup @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -61,9 +65,7 @@ return packer.startup(function(use)
 ------------------------------------------++ basic ++------------------------------------------
 -- colorscheme --
     use { 'embark-theme/vim', as = 'embark' }     -- embark: https://embark-theme.github.io
-    use 'Mofiqul/dracula.nvim'
-    use 'folke/tokyonight.nvim'                   -- currently in use
-
+    use { 'mikiya09/kabutack.nvim' }
 
 ------------------------------------------++ extra ++------------------------------------------
 -- hex color preview
@@ -154,3 +156,9 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
+
+
+
+
+
+
