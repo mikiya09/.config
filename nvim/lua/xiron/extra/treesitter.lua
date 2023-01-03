@@ -10,7 +10,7 @@ end
 
 configs.setup({
   -- A list of parser names, or "all"
-  ensure_installed = { "cpp", "lua", "rust" },
+  ensure_installed = { "cpp", "lua", "rust", },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,

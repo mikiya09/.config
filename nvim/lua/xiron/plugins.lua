@@ -1,8 +1,5 @@
 
 
-
-
-
 --------------------------------------------------------------------------------------------------------------
 -- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Pre-Setup @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -121,7 +118,7 @@ return packer.startup(function(use)
     use { "rafamadriz/friendly-snippets" }  -- a bunch of snippets to use
 
 
--- markdown file 
+-- markdown file preview
     use({ "iamcco/markdown-preview.nvim", 
         run = "cd app && npm install", 
         setup = function() vim.g.mkdp_filetypes = { "markdown" } end, 
