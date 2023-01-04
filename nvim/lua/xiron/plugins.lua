@@ -92,8 +92,8 @@ return packer.startup(function(use)
 
 -- treesitter: color highlighting
     use {
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate",
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
     }
 
 -- float window: toggleterm

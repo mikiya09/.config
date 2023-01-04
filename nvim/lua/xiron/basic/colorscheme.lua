@@ -17,12 +17,4 @@
 -- override some option 
 require('kabutack').setup {}
 
-
--- USE
 vim.cmd('colorscheme kabutack')
-
-
-
-
-
-

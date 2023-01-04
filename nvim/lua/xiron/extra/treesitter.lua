@@ -6,11 +6,9 @@ end
 
 
 
-
-
-configs.setup({
+require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "cpp", "lua", "rust", },
+  ensure_installed = "all",
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -20,7 +18,7 @@ configs.setup({
   auto_install = true,
 
   -- List of parsers to ignore installing (for "all")
-  ignore_install = { "python" },
+  ignore_install = { "javascript" },
 
   ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
@@ -33,7 +31,7 @@ configs.setup({
     -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
     -- the name of the parser)
     -- list of language that will be disabled
-    disable = { "c", "rust", "python", "css" },
+    disable = { "c", "rust" },
     -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
     disable = function(lang, buf)
         local max_filesize = 100 * 1024 -- 100 KB
@@ -49,25 +47,8 @@ configs.setup({
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
-  autopairs = {
-    enable = true,
-  },
-  indent = { enable = true, disable = { "python" } },
-})
+}
 
 
 
 
-
---[[ configs.setup({ ]]
---[[ 	ensure_installed = "all", -- one of "all" or a list of languages ]]
---[[ 	ignore_install = { "" }, -- List of parsers to ignore installing ]]
---[[ 	highlight = { ]]
---[[ 		enable = true, -- false will disable the whole extension ]]
---[[ 		disable = { "css" }, -- list of language that will be disabled ]]
---[[ 	}, ]]
---[[ 	autopairs = { ]]
---[[ 		enable = true, ]]
---[[ 	}, ]]
---[[ 	indent = { enable = true, disable = { "python" } }, ]]
---[[ }) ]]

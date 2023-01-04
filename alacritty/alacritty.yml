@@ -44,7 +44,7 @@ colors:
     red: '#ab1c0f' 
     # red: '#a51c24'
     green: '#62D196'
-    # green: '#4fd6be'
+    green2: '#4fd6be'
     yellow: '#F2B482'
     blue: '#7aa2f7'
     magenta: '#A37ACC'
@@ -55,7 +55,6 @@ colors:
   bright:
     black: '#3E3859'
     red: '#ff757f'
-    # green: '#4fd6be'
     green: '#A1EFD3'
     yellow: '#FFE6B3'
     blue: '#65B2FF'
