@@ -1,4 +1,10 @@
 
+-- if anything went wrong like treesitter is constantly showing the error message saying something is missing or uninstalled 
+-- that's mostly because parsers are not being installed 
+-- Install manually
+-- :TSInstall all
+
+
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
 	return
