@@ -1617,7 +1617,8 @@
   #               typed after changing current working directory.
   typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=always
 
-  # Instant prompt mode.
+  # Instant prompt mode: because I want to run command when I open the zsh shell, so make this quiet I don't see any message
+  # the problem is running command in zsh shell is too slow even though I disable this instant prompt
   #
   #   - off:     Disable instant prompt. Choose this if you've tried instant prompt and found
   #              it incompatible with your zsh configuration files.
