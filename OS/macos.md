@@ -403,7 +403,7 @@ brew install speedtest --force
 brew uninstall speedtest --force
 ```
 
-# &#x263a; Necessary Installation
+# &#x263b; Necessary Installation
 
 ### &#x260d; VimTex
 *&#x23f5; VimTex [repo](https://github.com/lervag/vimtex)* <br>
