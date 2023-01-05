@@ -192,7 +192,7 @@ xcode-select --install
 ```
 
 ### ➋  Install Homebrew 
-*&#x23f5; homebrew from [source](https://brew.sh)*
+*&#x25cf; homebrew from [source](https://brew.sh)*
 ```
 (+) $HOME=/Users/jojo
 
