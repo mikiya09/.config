@@ -192,7 +192,7 @@ xcode-select --install
 ```
 
 ### ➋  Install Homebrew 
-*&#x25cb; homebrew from [source](https://brew.sh)*
+*&#x23f5; homebrew from [source](https://brew.sh)*
 ```
 (+) $HOME=/Users/jojo
 
@@ -200,19 +200,19 @@ echo '# homebrew' >> $HOME/.zprofile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 ```
 
-*&#x25cb; basic commands with brew*
+*&#x23f5; basic commands with brew*
 ```
 brew install xxx
 brew uninstall/remove xxx
 ```
 
-*&#x25cb; Install Homebrew [Natively](./homebrew_natively.md) (e.g. users in China)* <br>
+*&#x23f5; Install Homebrew [Natively](./homebrew_natively.md) (e.g. users in China)* <br>
 
 ### ➌  Terminal Emulator
 ```
 brew install --cask alacritty
 ```
-*&#X25cb; modify shortcut really quick*
+*&#x23f5; modify shortcut really quick*
 ```
 1) open / 
 2) drag disk and user to the side bar of finder
@@ -221,11 +221,11 @@ brew install --cask alacritty
 ```
 
 ### ➍  Karabiner (virtual keyboard)
-*&#x25cb; install karabiner*
+*&#x23f5; install karabiner*
 ```
 brew install karabiner-elements --cask
 ```
-*&#x25cb; Use Karabiner-Elements for key-mapping*
+*&#x23f5; Use Karabiner-Elements for key-mapping*
 ```
 1) Click and open TWO KARABINERs for accessbility in input source inside privacy
     • allow app 
@@ -249,7 +249,7 @@ brew install karabiner-elements --cask
 ```
   
 ### ➎  Nerd Font
-*&#x25cb; go to [nerdfont](https://github.com/ryanoasis/nerd-fonts)*
+*&#x23f5; go to [nerdfont](https://github.com/ryanoasis/nerd-fonts)*
 ```
 1) patched-fonts folder
 2) each font folder will have their font appearance inside, probably
@@ -275,11 +275,11 @@ ex).
 ```
 
 ### ➐  Configuration Files
-*&#x25cb; [alacritty.yml](../alacritty/alacritty.yml)*
+*&#x23f5; [alacritty.yml](../alacritty/alacritty.yml)*
 ```
 vim ~/.config/alacritty/alacritty.yml
 ```
-*&#x25cb; [tmux.conf](../tmux/tmux.conf)*
+*&#x23f5; [tmux.conf](../tmux/tmux.conf)*
 ```
 vim ~/.config/tmux/tmux.conf
 ```
@@ -287,7 +287,7 @@ vim ~/.config/tmux/tmux.conf
 ```
 brew install zsh
 ```
-*&#x25cb; Add the following command to **.zprofile***
+*&#x23f5; Add the following command to **.zprofile***
 ```
 # XDG
 export XDG_CONFIG_HOME=/Users/mikiya/.config
@@ -302,13 +302,13 @@ export ZDOTDIR=/Users/mikiya/.config/zsh
 # else do remove the clear command
 clear
 ```
-*&#x25cb; Setup zsh Directory*
+*&#x23f5; Setup zsh Directory*
 ```
 >> cd ~/.config 
 >> mkdir zsh 
 >> touch .zshrc
 ```
-*&#x25cb; Configure zsh Directory*
+*&#x23f5; Configure zsh Directory*
 ```
 # powerlevel10k (before you know howb to write your own prompt use this)
 
@@ -318,7 +318,7 @@ clear
 >> git clone "...zsh_directory_in_github_repo..."
 >> if the syntax highlighting and autocomplete or any other plugin is not working, remove them and reinstall
 ```
-*&#x25cb; LSCOLORS*
+*&#x23f5; LSCOLORS*
 ```
 echo '\n# customize LS-colors (directory) https://geoff.greer.fm/lscolors/' >> ~/.config/zsh/.zshrc 
 echo '# green & unbold' >> ~/.config/zsh/.zshrc 
@@ -326,7 +326,7 @@ echo 'export LSCOLORS=cxfxexdxbxegedabagacac' >> ~/.config/zsh/.zshrc
 ```
 
 ### ➒  Essential Installation
-*&#x25cb; Git*
+*&#x23f5; Git*
 ```
 # install through homebrew
 brew install git
@@ -334,18 +334,18 @@ brew install git
 # export git path for replacing apple default git
 echo 'export PATH="/opt/homebrew/bin:${PATH}"' >> $HOME/.config/zsh/zsh-exports
 ```
-*&#x25cb; C++ compiler*
+*&#x23f5; C++ compiler*
 ```
 brew install gcc
 ```
 
-*&#x25cb; Neovim*
+*&#x23f5; Neovim*
 ```
 brew install neovim
 ```
 
 ### ➓  Neovim Configuration
-*&#x25cb; refer to [nvim repo](../nvim)*
+*&#x23f5; refer to [nvim repo](../nvim)*
 ```
 cd ~/.config/nvim
 touch init.lua
@@ -353,7 +353,7 @@ mkdir xiron
 ```
 
 ### &#x24eb; MacOS control
-*&#x25cb; [drag windows without titlebar](https://www.mackungfu.org/UsabilityhackClickdraganywhereinmacOSwindowstomovethem)*
+*&#x23f5; [drag windows without titlebar](https://www.mackungfu.org/UsabilityhackClickdraganywhereinmacOSwindowstomovethem)*
 ```
 # enable
 >> defaults write -g NSWindowShouldDragOnGesture -bool true
@@ -374,7 +374,7 @@ brew install cmatrix
 ```
 brew install openssl
 ```
-*&#x25cb; set path*
+*&#x23f5; set path*
 ```
 # sometimes openssl@3, follow the tips output from the terminal shell
 # mostly, the terminal output will prompt you to set path variable
@@ -386,7 +386,7 @@ echo 'export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"' >> ~/.config/zsh/
 
 
 ### &#x24ee; Node
-*&#x25cb; Download [macOS installer LTS version](https://bit.ly/nodenpm)*
+*&#x23f5; Download [macOS installer LTS version](https://bit.ly/nodenpm)*
 ```
 >> node --version
 >> npm --version
@@ -403,11 +403,11 @@ brew install speedtest --force
 brew uninstall speedtest --force
 ```
 
-# &#x238b; Necessary Installation
+# &#x263a; Necessary Installation
 
-### &#x23f5; VimTex
-*&#x25cb; VimTex [repo](https://github.com/lervag/vimtex)* <br>
-*&#x25cb; Guide -> DataSci [repo](https://github.com/mikiya09/DataSci)*
+### &#x260d; VimTex
+*&#x23f5; VimTex [repo](https://github.com/lervag/vimtex)* <br>
+*&#x23f5; Guide -> DataSci [repo](https://github.com/mikiya09/DataSci)*
 ```
 # compiler is needed, but you don't have to install the whole MaxTex
 # ------------------------------------------------------------------
@@ -421,27 +421,27 @@ brew uninstall speedtest --force
 # also inside plugin.lua 
 >> use 'lervag/vimtex'
 ```
-*&#x25cb; check if successfully installed*
+*&#x23f5; check if successfully installed*
 ```
 >> latexmk 
 >> pdflatex
 ```
 
-*&#x25cb; generate pdf through command line*
+*&#x23f5; generate pdf through command line*
 ```
 >> pdflatex xxx.tex 
 ```
-*&#x25cb; inside .tex file*
+*&#x23f5; inside .tex file*
 ```
 :echo g:vimtex_view_enabled
 ```
-*&#x25cb; PDF preview plugin* <br>
-*&#x25cb; add the configuration to VimTex.lua setting skim as default preview app*
+*&#x23f5; PDF preview plugin* <br>
+*&#x23f5; add the configuration to VimTex.lua setting skim as default preview app*
 ```
 >> brew install --cask skim
 >> echo "vim.g['vimtex_view_method'] = 'skim'" >> ~/.config/nvim/lua/xiron/extra/VimTex.lua
 ```
-*&#x25cb; [mapping shortcut](https://www.ejmastnak.com/tutorials/vim-latex/vimtex.html#options)*
+*&#x23f5; [mapping shortcut](https://www.ejmastnak.com/tutorials/vim-latex/vimtex.html#options)*
 ```
 [normal mode]:
 --------------
@@ -452,7 +452,7 @@ cse: Change surrounding environments(change what's in bracket)
 ..map them with alacritty..
 ```
 
-*&#x25cb; basic command*
+*&#x23f5; basic command*
 ```
 # compile .tex file to pdf -> mapped with <leader>r
 :VimtexCompile
@@ -461,12 +461,12 @@ cse: Change surrounding environments(change what's in bracket)
 :
 ```
 
-### &#x23f5; Window Management 
-*&#x25cb; install [Amethyst](https://github.com/ianyh/Amethyst) and enable accessibility features*
+### &#x260d; Window Management 
+*&#x23f5; install [Amethyst](https://github.com/ianyh/Amethyst) and enable accessibility features*
 ```
 brew install --cask amethyst
 ```
-*&#x25cb; preference setting*
+*&#x23f5; preference setting*
 ```
 1) Floating --> choose automatically float all applications except those listed
     + Alacritty
@@ -513,8 +513,8 @@ brew install --cask amethyst
     >> it's just need to manually specify each time
 ```
 
-### &#x23f5; Install Python environment
-*&#x25cb; silicon difference*
+### &#x260d; Install Python environment
+*&#x23f5; silicon difference*
 ```
 # for apple silicon (arm64)
 
@@ -522,13 +522,13 @@ brew install --cask amethyst
 >> conda init "$(basename "${SHELL}")"
 ```
 
-### &#x23f5; Tensorflow
-*&#x25cb; check*
+### &#x260d; Tensorflow
+*&#x23f5; check*
 ```
 >> which python 
 [output]: /opt/homebrew/Caskroom/miniforge/base/bin/python
 ```
-*&#x25cb; download .yml file from Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install)*
+*&#x23f5; download .yml file from Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install)*
 ```
 >> cd ~/.../installation
 
@@ -543,18 +543,18 @@ brew install --cask amethyst
 
 # go to his repo copy the code for testing if the GPU is available
 ```
-*&#x25cb; how to remove ipykernel name*
+*&#x23f5; how to remove ipykernel name*
 ```
 # check kernel list 
 >> jupyter kernelspec list 
 >> jupyter kernelspec uninstall kernel_name
 ```
 
-### &#x23f5; Pytorch
+### &#x260d; Pytorch
 **{...}**
 
-### &#x23f5; C++
-*&#x25cb; Compile .cpp file and run*
+### &#x260d; C++
+*&#x23f5; Compile .cpp file and run*
 ```
 # full command 
 >> g++ -Wall -std=c++20 xxx.cpp -o run && ./run
@@ -566,7 +566,7 @@ brew install --cask amethyst
 # name your compiled file:   -o run
 # run compiled file:         ./run
 ```
-*&#x25cb; SFML Library*
+*&#x23f5; SFML Library*
 ```
 brew install sfml
 brew info sfml
@@ -576,7 +576,7 @@ brew info sfml
 # where is SFML package (I)
 # where is the necessary libraries (L)
 ```
-*&#x25cb; Compile SFML (a bit messy)*
+*&#x23f5; Compile SFML (a bit messy)*
 ```
 >> g++ test.cpp -Wall -I/[1] -o run -L/[2] -lsfml-graphics -lsfml-window -lsfml-system
 
@@ -586,8 +586,8 @@ brew info sfml
 ```
    
     
-### &#x23f5; Java
-*&#x25cb; Download java env*
+### &#x260d; Java
+*&#x23f5; Download java env*
 ```
 # 1. Java (JDK): https://java.com/en/download/help/develop.html
 # 2. Java SE Development Kit: https://www.oracle.com/java/technologies/downloads/
