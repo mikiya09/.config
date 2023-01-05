@@ -192,7 +192,7 @@ xcode-select --install
 ```
 
 ### ➋  Install Homebrew 
-[+] homebrew from [source](https://brew.sh)
+*&#x25cb; homebrew from [source](https://brew.sh)*
 ```
 (+) $HOME=/Users/jojo
 
@@ -200,31 +200,32 @@ echo '# homebrew' >> $HOME/.zprofile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 ```
 
-**[+] Basic Commands with brew**
+*&#x25cb; basic commands with brew*
 ```
 brew install xxx
 brew uninstall/remove xxx
 ```
 
-**Install Homebrew [Natively](./homebrew_natively.md) (e.g. users in China)** <br>
-<br>---------------------------------------------------------
+*&#x25cb; Install Homebrew [Natively](./homebrew_natively.md) (e.g. users in China)* <br>
 
 ### ➌  Terminal Emulator
 ```
 brew install --cask alacritty
 ```
-*>> open /* <br>
-*>> drag disk and user to the side bar of finder* <br>
-*>> remove document from side bar* <br>
-*>> replace hide alacritty command "cmd+h" in shortcut*
-
+*&#X25cb; modify shortcut really quick*
+```
+1) open / 
+2) drag disk and user to the side bar of finder
+3) remove document from side bar
+4) replace hide alacritty command "cmd+h" in shortcut
+```
 
 ### ➍  Karabiner (virtual keyboard)
-**[+] install karabiner**
+*&#x25cb; install karabiner*
 ```
 brew install karabiner-elements --cask
 ```
-**[+] Use Karabiner-Elements for key-mapping**
+*&#x25cb; Use Karabiner-Elements for key-mapping*
 ```
 1) Click and open TWO KARABINERs for accessbility in input source inside privacy
     • allow app 
@@ -248,7 +249,7 @@ brew install karabiner-elements --cask
 ```
   
 ### ➎  Nerd Font
-**[+] go to [nerdfont](https://github.com/ryanoasis/nerd-fonts)**
+*&#x25cb; go to [nerdfont](https://github.com/ryanoasis/nerd-fonts)*
 ```
 1) patched-fonts folder
 2) each font folder will have their font appearance inside, probably
@@ -274,11 +275,11 @@ ex).
 ```
 
 ### ➐  Configuration Files
-**[+] [alacritty.yml](../alacritty/alacritty.yml)**
+*&#x25cb; [alacritty.yml](../alacritty/alacritty.yml)*
 ```
 vim ~/.config/alacritty/alacritty.yml
 ```
-**[+] [tmux.conf](../tmux/tmux.conf)**
+*&#x25cb; [tmux.conf](../tmux/tmux.conf)*
 ```
 vim ~/.config/tmux/tmux.conf
 ```
@@ -286,46 +287,28 @@ vim ~/.config/tmux/tmux.conf
 ```
 brew install zsh
 ```
-**[+] configure .zprofile file with the following prefix** <br>
-*(.zprofile has higher priority compared to .zshrc in the same directory)*
+*&#x25cb; Add the following command to **.zprofile***
 ```
->> vim ~/.zprofile 
-# -----------------------------------------------------------------------------------------------------
-# |                                                                                                   |
-# |   1) scripting                                                                                    |
-# |   used for arranging some low-level operation? Such as which path for which functionality         |
-# |   for example, ~/.zprofile is one of those file                                                   |
-# |   in terms of priority, .zprofile is higher than .zshrc if they are in the same directory         |
-# |                                                                                                   |
-# |   ========================================================================================        |
-# |   2) by exporting ZDOTDIR                                                                         |
-# |   setting setting the path of zsh-shell configuration to ~/.config/zsh                            |
-# |   so then inside the directory we can touch .zshrc file and manage all paths                      |
-# |   variables and all sorts of thing                                                                |
-# |                                                                                                   |
-# |   ========================================================================================        |
-# |   3) reference                                                                                    |
-# |   https://github.com/ChristianChiarulli/Machfiles/blob/master/x/.xprofile                         |
-# |                                                                                                   |
-# -----------------------------------------------------------------------------------------------------
+# XDG
+export XDG_CONFIG_HOME=/Users/mikiya/.config
+export XDG_CACHE_HOME=/Users/mikiya/.cache
+export XDG_DATA_HOME=/Users/mikiya/.local/share
 
+# zsh config dir
+export ZDOTDIR=/Users/mikiya/.config/zsh
+
+# if the login info is displayed
+# add the clear at the end of the .zprofile 
+# else do remove the clear command
+clear
 ```
-**[+] In Command Line**
-```
-echo "# XDG" >> $HOME/.zprofile
-echo "export XDG_CONFIG_HOME=$HOME/.config" >> $HOME/.zprofile
-echo "export XDG_CACHE_HOME=$HOME/.cache" >> $HOME/.zprofile
-echo "export XDG_DATA_HOME=$HOME/.local/share" >> $HOME/.zprofile
-echo "\n# zsh config dir" >> $HOME/.zprofile
-echo "export ZDOTDIR=$HOME/.config/zsh" >> $HOME/.zprofile
-```
-**[+] Setup zsh Directory**
+*&#x25cb; Setup zsh Directory*
 ```
 >> cd ~/.config 
 >> mkdir zsh 
 >> touch .zshrc
 ```
-**[+] Configure zsh Directory**
+*&#x25cb; Configure zsh Directory*
 ```
 # powerlevel10k (before you know howb to write your own prompt use this)
 
@@ -335,7 +318,7 @@ echo "export ZDOTDIR=$HOME/.config/zsh" >> $HOME/.zprofile
 >> git clone "...zsh_directory_in_github_repo..."
 >> if the syntax highlighting and autocomplete or any other plugin is not working, remove them and reinstall
 ```
-**[+] LSCOLORS**
+*&#x25cb; LSCOLORS*
 ```
 echo '\n# customize LS-colors (directory) https://geoff.greer.fm/lscolors/' >> ~/.config/zsh/.zshrc 
 echo '# green & unbold' >> ~/.config/zsh/.zshrc 
@@ -343,7 +326,7 @@ echo 'export LSCOLORS=cxfxexdxbxegedabagacac' >> ~/.config/zsh/.zshrc
 ```
 
 ### ➒  Essential Installation
-##### `>> git`
+*&#x25cb; Git*
 ```
 # install through homebrew
 brew install git
@@ -351,19 +334,18 @@ brew install git
 # export git path for replacing apple default git
 echo 'export PATH="/opt/homebrew/bin:${PATH}"' >> $HOME/.config/zsh/zsh-exports
 ```
-
-##### `>> C++ compiler`
+*&#x25cb; C++ compiler*
 ```
 brew install gcc
 ```
 
-##### `>> Neovim`
+*&#x25cb; Neovim*
 ```
 brew install neovim
 ```
 
 ### ➓  Neovim Configuration
-**[+] refer to [nvim repo](https://github.com/mikiya09/envSetup/tree/master/nvim)**
+*&#x25cb; refer to [nvim repo](../nvim)*
 ```
 cd ~/.config/nvim
 touch init.lua
@@ -371,7 +353,7 @@ mkdir xiron
 ```
 
 ### &#x24eb; MacOS control
-**[+] [drag windows without titlebar](https://www.mackungfu.org/UsabilityhackClickdraganywhereinmacOSwindowstomovethem)**
+*&#x25cb; [drag windows without titlebar](https://www.mackungfu.org/UsabilityhackClickdraganywhereinmacOSwindowstomovethem)*
 ```
 # enable
 >> defaults write -g NSWindowShouldDragOnGesture -bool true
@@ -392,9 +374,11 @@ brew install cmatrix
 ```
 brew install openssl
 ```
-*[+] sometimes openssl@3, follow the tips output from the terminal shell* <br>
-*[+] mostly, the terminal output will prompt you to set path variable*
+*&#x25cb; set path*
 ```
+# sometimes openssl@3, follow the tips output from the terminal shell
+# mostly, the terminal output will prompt you to set path variable
+
 echo 'export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"' >> ~/.config/zsh/.zshrc
 echo 'export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"' >> ~/.config/zsh/.zshrc
 echo 'export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"' >> ~/.config/zsh/.zshrc
@@ -402,7 +386,7 @@ echo 'export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"' >> ~/.config/zsh/
 
 
 ### &#x24ee; Node
-**Download [macOS installer LTS version](https://bit.ly/nodenpm)**
+*&#x25cb; Download [macOS installer LTS version](https://bit.ly/nodenpm)*
 ```
 >> node --version
 >> npm --version
@@ -410,7 +394,7 @@ echo 'export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"' >> ~/.config/zsh/
 
 ### &#x24ef; Entertainment
 ```
->> sudo npm install -g mapscii      # require node.js installed
+sudo npm install -g mapscii      # require node.js installed
 brew install cointop
 brew install bpytop 
 brew tap teamookla/speedtest
@@ -422,11 +406,12 @@ brew uninstall speedtest --force
 # &#x238b; Necessary Installation
 
 ### &#x23f5; VimTex
-##### &#x25cf; VimTex [Repo](https://github.com/lervag/vimtex) 
-##### &#x25cf; Guide -> [learnCS repo](https://github.com/mikiya09/learnCS/tree/main/LaTex)
-
-*[+] compiler is needed, but you don't have to install the whole MaxTex*
+*&#x25cb; VimTex [repo](https://github.com/lervag/vimtex)* <br>
+*&#x25cb; Guide -> DataSci [repo](https://github.com/mikiya09/DataSci)*
 ```
+# compiler is needed, but you don't have to install the whole MaxTex
+# ------------------------------------------------------------------
+
 # option that I had tried
 >> brew install --cask mactex-no-gui
 
@@ -436,27 +421,27 @@ brew uninstall speedtest --force
 # also inside plugin.lua 
 >> use 'lervag/vimtex'
 ```
-*[+] check if successfully installed*
+*&#x25cb; check if successfully installed*
 ```
 >> latexmk 
 >> pdflatex
 ```
 
-*[+] generate pdf through command line*
+*&#x25cb; generate pdf through command line*
 ```
 >> pdflatex xxx.tex 
 ```
-*[+] inside .tex file*
+*&#x25cb; inside .tex file*
 ```
 :echo g:vimtex_view_enabled
 ```
-*[+] PDF preview plugin* <br>
-*[+] add the configuration to VimTex.lua setting skim as default preview app*
+*&#x25cb; PDF preview plugin* <br>
+*&#x25cb; add the configuration to VimTex.lua setting skim as default preview app*
 ```
 >> brew install --cask skim
 >> echo "vim.g['vimtex_view_method'] = 'skim'" >> ~/.config/nvim/lua/xiron/extra/VimTex.lua
 ```
-*[+] [mapping shortcut](https://www.ejmastnak.com/tutorials/vim-latex/vimtex.html#options)*
+*&#x25cb; [mapping shortcut](https://www.ejmastnak.com/tutorials/vim-latex/vimtex.html#options)*
 ```
 [normal mode]:
 --------------
@@ -467,7 +452,7 @@ cse: Change surrounding environments(change what's in bracket)
 ..map them with alacritty..
 ```
 
-*[+] basic command*
+*&#x25cb; basic command*
 ```
 # compile .tex file to pdf -> mapped with <leader>r
 :VimtexCompile
@@ -477,11 +462,11 @@ cse: Change surrounding environments(change what's in bracket)
 ```
 
 ### &#x23f5; Window Management 
-**[+] install [Amethyst](https://github.com/ianyh/Amethyst) and enable accessibility features**
+*&#x25cb; install [Amethyst](https://github.com/ianyh/Amethyst) and enable accessibility features*
 ```
 brew install --cask amethyst
 ```
-*[+] preference setting*
+*&#x25cb; preference setting*
 ```
 1) Floating --> choose automatically float all applications except those listed
     + Alacritty
@@ -529,7 +514,7 @@ brew install --cask amethyst
 ```
 
 ### &#x23f5; Install Python environment
-**[+] silicon difference**
+*&#x25cb; silicon difference*
 ```
 # for apple silicon (arm64)
 
@@ -538,12 +523,12 @@ brew install --cask amethyst
 ```
 
 ### &#x23f5; Tensorflow
-**[+] check**
+*&#x25cb; check*
 ```
 >> which python 
 [output]: /opt/homebrew/Caskroom/miniforge/base/bin/python
 ```
-**[+] download ".yml file" from Jeff Heaton's [Repo](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install)**
+*&#x25cb; download .yml file from Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install)*
 ```
 >> cd ~/.../installation
 
@@ -558,7 +543,7 @@ brew install --cask amethyst
 
 # go to his repo copy the code for testing if the GPU is available
 ```
-**remove ipykernel name**
+*&#x25cb; how to remove ipykernel name*
 ```
 # check kernel list 
 >> jupyter kernelspec list 
@@ -569,7 +554,7 @@ brew install --cask amethyst
 **{...}**
 
 ### &#x23f5; C++
-**[+] Compile .cpp file and run**
+*&#x25cb; Compile .cpp file and run*
 ```
 # full command 
 >> g++ -Wall -std=c++20 xxx.cpp -o run && ./run
@@ -581,7 +566,7 @@ brew install --cask amethyst
 # name your compiled file:   -o run
 # run compiled file:         ./run
 ```
-**[+] SFML Library**
+*&#x25cb; SFML Library*
 ```
 brew install sfml
 brew info sfml
@@ -591,8 +576,7 @@ brew info sfml
 # where is SFML package (I)
 # where is the necessary libraries (L)
 ```
-**[+] Compile SFML** <br>
-*a bit messy*
+*&#x25cb; Compile SFML (a bit messy)*
 ```
 >> g++ test.cpp -Wall -I/[1] -o run -L/[2] -lsfml-graphics -lsfml-window -lsfml-system
 
@@ -603,7 +587,7 @@ brew info sfml
    
     
 ### &#x23f5; Java
-**[+] Download java env**
+*&#x25cb; Download java env*
 ```
 # 1. Java (JDK): https://java.com/en/download/help/develop.html
 # 2. Java SE Development Kit: https://www.oracle.com/java/technologies/downloads/
