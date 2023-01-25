@@ -114,6 +114,7 @@ Add shortcuts for the following apps (setup alacritty later)
 | Chrome |
 ----------
     • Always Show Bookmarks Bar         --> ctrl + f
+    • Reopen Closed Tab                 --> cmd + ctrl + z
 
 ----------
 | global |
