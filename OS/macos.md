@@ -2,6 +2,9 @@
 
 # &#x2615; System Preferences
 
+### To Begin With
+**Download and setup all app that require privacy access before updating macOS version**
+
 ### &#x2460; Display 
 **+ scale**
 ```
