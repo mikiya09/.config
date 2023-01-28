@@ -294,12 +294,12 @@ brew install zsh
 *&#x23f5; Add the following command to **.zprofile***
 ```
 # XDG
-export XDG_CONFIG_HOME=/Users/mikiya/.config
-export XDG_CACHE_HOME=/Users/mikiya/.cache
-export XDG_DATA_HOME=/Users/mikiya/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
 
 # zsh config dir
-export ZDOTDIR=/Users/mikiya/.config/zsh
+export ZDOTDIR=$HOME/.config/zsh
 
 # if the login info is displayed
 # add the clear at the end of the .zprofile 
@@ -539,7 +539,7 @@ brew install --cask amethyst
 # go to base environment 
 >> conda install -y jupyter 
 >> conda deactivate 
->> conda env create -f tersorflow-apple-metal.yml -n tensorflow
+>> conda env create -f tensorflow-apple-metal.yml -n tensorflow
 >> conda info -e 
 >> conda activate tensorflow
 >> python -m ipykernel install --user --name tensorflow --display-name "Python 3.9 (tensorflow)"
