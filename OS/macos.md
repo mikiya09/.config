@@ -532,9 +532,11 @@ brew install --cask amethyst
 >> which python 
 [output]: /opt/homebrew/Caskroom/miniforge/base/bin/python
 ```
-*&#x23f5; download .yml file from Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install)*
+*&#x23f5; check out Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install)*
+<br />
+*&#x23f5; download [.yml](./yml/tensorflow-apple-metal.yml) for tensorflow here*
 ```
->> cd ~/.../installation
+>> cd ~/anywhere-yml-for-installation
 
 # go to base environment 
 >> conda install -y jupyter 
@@ -555,7 +557,21 @@ brew install --cask amethyst
 ```
 
 ### &#x260d; Pytorch
-**{...}**
+*&#x23f5; same steps from above, checkout 
+Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/blob/pytorch/install/pytorch-install-aug-2022.ipynb) 
+on pytorch branch*
+<br />
+*&#x23f5; download [.yml](./yml/torch-conda-nightly.yml) for pytorch here*
+```
+>> cd ~/anywhere-yml-for-installation
+
+>> conda deactivate 
+>> conda env create -f torch-conda-nightly.yml -n torch
+>> conda activate torch
+>> python -m ipykernel install --user --name pytorch --display-name "Python 3.9 (pytorch)"
+>> jupyter notebook
+```
+*&#x23f5; instead of checking GPU, torch is checking MPS, which is (Apple Metal) for GPU*
 
 ### &#x260d; C++
 *&#x23f5; Compile .cpp file and run*
