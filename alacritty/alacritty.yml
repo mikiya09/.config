@@ -40,7 +40,7 @@ colors:
 
   # normal color 
   normal:
-    black: '#100E23'
+    black: '#121212'
     red: '#ab1c0f' 
     # red: '#a51c24'
     green: '#62D196'
@@ -120,7 +120,7 @@ font:
     x: 1
     y: 1
 
-  size: 13.5
+  size: 13
 
 
 
@@ -129,7 +129,7 @@ window:
   
   # dimensions
   dimensions:
-    columns: 230
+    columns: 223
     lines: 75
 
   # position on the screen, later can be replaced by window manager
