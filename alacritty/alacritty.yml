@@ -8,7 +8,7 @@
 env:
   TERM: xterm-256color
 
-working_directory: "/Users/mikiya/wormhole/toKnow/"
+working_directory: "/Users/mikiyax/wormhole/toKnow/"
 
 # ======================================================= Color ====================================================
 colors:
@@ -120,7 +120,7 @@ font:
     x: 1
     y: 1
 
-  size: 13
+  size: 12.5
 
 
 
@@ -129,8 +129,8 @@ window:
   
   # dimensions
   dimensions:
-    columns: 223
-    lines: 75
+    columns: 200
+    lines: 65
 
   # position on the screen, later can be replaced by window manager
   # position:

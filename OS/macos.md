@@ -4,6 +4,13 @@
 
 ### To Begin With
 **Download and setup all app that require privacy access before updating macOS version**
+```
+1) npm installer 
+2) zoom 
+3) karabiner
+4) Alfred 
+...
+```
 
 ### &#x2460; Display 
 **+ scale**
