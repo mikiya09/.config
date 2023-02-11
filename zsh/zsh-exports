@@ -15,8 +15,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# disable conda env auto-activated
-conda config --set auto_activate_base true
 
 # export neovim as editor
 export EDITOR="nvim"

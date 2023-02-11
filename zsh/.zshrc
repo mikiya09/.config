@@ -14,6 +14,8 @@ export ZDOTDIR=$HOME/.config/zsh
 HISTFILE=~/.zsh_history
 setopt appendhistory
 
+# prevernt conda-auto activate 
+conda config --set auto_activate_base false
 
 # Some useful options (man zshoption)
 # {...}

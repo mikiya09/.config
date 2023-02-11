@@ -533,6 +533,29 @@ brew install --cask amethyst
 >> conda init "$(basename "${SHELL}")"
 ```
 
+### &#x260d; Pytorch
+*&#x23f5; same steps from above, checkout 
+Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/blob/pytorch/install/pytorch-install-aug-2022.ipynb) 
+on pytorch branch*
+<br />
+*&#x23f5; download [.yml](./yml/torch-conda-nightly.yml) for pytorch here*
+```
+>> cd ~/anywhere-yml-for-installation
+
+>> conda deactivate 
+>> conda env create -f torch-conda-nightly.yml -n torch
+>> conda activate torch
+>> python -m ipykernel install --user --name pytorch --display-name "Python 3.9 (pytorch)"
+>> jupyter notebook
+# instead of checking GPU, torch is checking MPS, which is (Apple Metal) for GPU*
+```
+*&#x23f5; how to remove ipykernel name*
+```
+# check kernel list 
+>> jupyter kernelspec list 
+>> jupyter kernelspec uninstall kernel_name
+```
+
 ### &#x260d; Tensorflow
 *&#x23f5; check*
 ```
@@ -556,29 +579,7 @@ brew install --cask amethyst
 
 # go to his repo copy the code for testing if the GPU is available
 ```
-*&#x23f5; how to remove ipykernel name*
-```
-# check kernel list 
->> jupyter kernelspec list 
->> jupyter kernelspec uninstall kernel_name
-```
 
-### &#x260d; Pytorch
-*&#x23f5; same steps from above, checkout 
-Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/blob/pytorch/install/pytorch-install-aug-2022.ipynb) 
-on pytorch branch*
-<br />
-*&#x23f5; download [.yml](./yml/torch-conda-nightly.yml) for pytorch here*
-```
->> cd ~/anywhere-yml-for-installation
-
->> conda deactivate 
->> conda env create -f torch-conda-nightly.yml -n torch
->> conda activate torch
->> python -m ipykernel install --user --name pytorch --display-name "Python 3.9 (pytorch)"
->> jupyter notebook
-```
-*&#x23f5; instead of checking GPU, torch is checking MPS, which is (Apple Metal) for GPU*
 
 ### &#x260d; C++
 *&#x23f5; Compile .cpp file and run*
