@@ -4,11 +4,11 @@
 
 
 ## Mac 
-#### &#x21b3; [macos](./OS/macos.md)
+#### &#x21b3; [macos](./os/macos.md)
 <br />
 
 ## Linux
-#### &#x21b3; [Linux](./OS/linux.md)
+#### &#x21b3; [Linux](./os/linux.md)
 <br />
 
 ## And More

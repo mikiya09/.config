@@ -40,6 +40,9 @@ Temporary Items
 plugins
 filezilla
 
+# dependency for nerd font patcher
+fontforge
+
 # jupyter notebook 
 .ipynb_checkpoints
 
