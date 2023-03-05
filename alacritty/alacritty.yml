@@ -106,10 +106,11 @@ cursor:
 # ======================================================== Font ================================================================
 font:
   normal:
-    family: CodeNewRoman Nerd Font
-    style: Regular
-    # family: SauceCodePro Nerd Font
-    # style: Light
+    # family: CodeNewRoman Nerd Font
+    family: SauceCodePro Nerd Font
+    # style: Regular
+    # style: Thin
+    style: Light
     
   # italic:
   #   family: SauceCodePro Nerd Font 
