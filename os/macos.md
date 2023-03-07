@@ -563,6 +563,7 @@ Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/blob/py
 on pytorch branch*
 <br />
 *&#x23f5; download [.yml](./yml/torch-conda-nightly.yml) for pytorch here*
+<br />
 *&#x23f5; check out this [installation](https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c)*
 ```
 >> cd ~/anywhere-yml-for-installation
