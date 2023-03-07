@@ -364,12 +364,19 @@ echo 'export PATH="/opt/homebrew/bin:${PATH}"' >> $HOME/.config/zsh/zsh-exports
 ```
 *&#x23f5; C++ compiler*
 ```
-brew install gcc
+>> brew install gcc
+```
+
+*&#x23f5; Sound Player*
+```
+# play .wav file 
+>> brew install sox 
+>> sox /path/to/wav_file -d
 ```
 
 *&#x23f5; Neovim*
 ```
-brew install neovim
+>> brew install neovim
 ```
 
 ### ➓  Neovim Configuration
@@ -556,6 +563,7 @@ Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/blob/py
 on pytorch branch*
 <br />
 *&#x23f5; download [.yml](./yml/torch-conda-nightly.yml) for pytorch here*
+*&#x23f5; check out this [installation](https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c)*
 ```
 >> cd ~/anywhere-yml-for-installation
 
