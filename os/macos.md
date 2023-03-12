@@ -2,16 +2,6 @@
 
 # &#x2615; System Preferences
 
-### To Begin With
-**Download and setup all app that require privacy access before updating macOS version**
-```
-1) npm installer 
-2) zoom 
-3) karabiner
-4) Alfred 
-...
-```
-
 ### &#x2460; Display 
 **+ scale**
 ```
@@ -168,7 +158,7 @@ make use of this app as well
 
 <br>
 
-# &#x231b; Terminal Level
+# &#x231b; Development Environment
 ```
 Basic Directory Tree: 
 
@@ -220,6 +210,7 @@ brew uninstall/remove xxx
 *&#x23f5; Install Homebrew [Natively](./homebrew_natively.md) (e.g. users in China)* <br>
 
 ### ➌  Terminal Emulator
+*&#x23f5; [alacritty.yml](../alacritty/alacritty.yml)*
 ```
 brew install --cask alacritty
 ```
@@ -294,7 +285,37 @@ still missing some icon even after patched, look into it later
 ```
 
 
-### ➏  Install Tmux
+### ➏  Necessity
+*&#x23f5; Git*
+```
+# install through homebrew
+brew install git
+
+# export git path for replacing apple default git
+echo 'export PATH="/opt/homebrew/bin:${PATH}"' >> $HOME/.config/zsh/zsh-exports
+```
+*&#x23f5; C++ compiler*
+```
+>> brew install gcc
+```
+
+*&#x23f5; Sound Player*
+```
+# play .wav file 
+>> brew install sox 
+>> sox /path/to/wav_file -d
+
+```
+*&#x23f5; Download [macOS installer LTS version](https://bit.ly/nodenpm)*
+```
+>> node --version
+>> npm --version
+```
+
+
+### ➐  Terminal Level
+#### &#x260d; Install Tmux
+*&#x23f5; [tmux.conf](../tmux/tmux.conf)*
 ```
 >> brew install tmux
 
@@ -302,16 +323,7 @@ still missing some icon even after patched, look into it later
 >> tmux info | grep -e RGB -e Tc
 ```
 
-### ➐  Configuration Files
-*&#x23f5; [alacritty.yml](../alacritty/alacritty.yml)*
-```
-vim ~/.config/alacritty/alacritty.yml
-```
-*&#x23f5; [tmux.conf](../tmux/tmux.conf)*
-```
-vim ~/.config/tmux/tmux.conf
-```
-### ➑  zsh
+#### &#x260d; zsh
 ```
 brew install zsh
 ```
@@ -346,101 +358,106 @@ clear
 >> git clone "...zsh_directory_in_github_repo..."
 >> if the syntax highlighting and autocomplete or any other plugin is not working, remove them and reinstall
 ```
-*&#x23f5; LSCOLORS*
-```
-echo '\n# customize LS-colors (directory) https://geoff.greer.fm/lscolors/' >> ~/.config/zsh/.zshrc 
-echo '# green & unbold' >> ~/.config/zsh/.zshrc 
-echo 'export LSCOLORS=cxfxexdxbxegedabagacac' >> ~/.config/zsh/.zshrc
-```
 
-### ➒  Essential Installation
-*&#x23f5; Git*
-```
-# install through homebrew
-brew install git
-
-# export git path for replacing apple default git
-echo 'export PATH="/opt/homebrew/bin:${PATH}"' >> $HOME/.config/zsh/zsh-exports
-```
-*&#x23f5; C++ compiler*
-```
->> brew install gcc
-```
-
-*&#x23f5; Sound Player*
-```
-# play .wav file 
->> brew install sox 
->> sox /path/to/wav_file -d
-```
-
-*&#x23f5; Neovim*
-```
->> brew install neovim
-```
-
-### ➓  Neovim Configuration
+#### &#x260d; Neovim
 *&#x23f5; refer to [nvim repo](../nvim)*
 ```
+>> brew install neovim
+
 cd ~/.config/nvim
 touch init.lua
 mkdir xiron
 ```
 
-### &#x24eb; MacOS control
-*&#x23f5; [drag windows without titlebar](https://www.mackungfu.org/UsabilityhackClickdraganywhereinmacOSwindowstomovethem)*
-```
-# enable
->> defaults write -g NSWindowShouldDragOnGesture -bool true
->> exit
-
-# disable
->> defaults delete -g NSWindowShouldDragOnGesture
-```
-
-### &#x24ec; Cool Stuff
-```
-brew install numi --cask
-brew install keycastr --cask
-brew install cmatrix
-```
-
-### &#x24ed; openssl
-```
-brew install openssl
-```
-*&#x23f5; set path*
-```
-# sometimes openssl@3, follow the tips output from the terminal shell
-# mostly, the terminal output will prompt you to set path variable
-
-echo 'export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"' >> ~/.config/zsh/.zshrc
-echo 'export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"' >> ~/.config/zsh/.zshrc
-echo 'export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"' >> ~/.config/zsh/.zshrc
-```
 
 
-### &#x24ee; Node
-*&#x23f5; Download [macOS installer LTS version](https://bit.ly/nodenpm)*
+#### &#x260d; Conda
+*&#x23f5; miniconda (silicon difference)*
 ```
->> node --version
->> npm --version
+# for apple silicon (arm64)
+
+>> brew install miniforge 
+>> conda init "$(basename "${SHELL}")"
+```
+*&#x23f5; pytorch -> [.yml](./yml/torch-conda-nightly.yml) or this [installation](https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c)* 
+```
+# refer to Jeff Heaton's github pages, on pytorch branch
+
+>> cd ~/anywhere-yml-for-installation
+>> conda env create -f torch-conda-nightly.yml -n torch
+>> conda activate torch
+>> python -m ipykernel install --user --name pytorch --display-name "Python 3.9 (pytorch)"
+>> jupyter notebook
+# instead of checking GPU, torch is checking MPS, which is (Apple Metal) for GPU*
+```
+*&#x23f5; how to remove ipykernel name*
+```
+# check kernel list 
+>> jupyter kernelspec list 
+>> jupyter kernelspec uninstall kernel_name
 ```
 
-### &#x24ef; Entertainment
+*&#x23f5; Tensorflow -> [.yml](./yml/tensorflow-apple-metal.yml)*
 ```
-sudo npm install -g mapscii      # require node.js installed
-brew install cointop
-brew install bpytop 
-brew tap teamookla/speedtest
-brew update
-brew install speedtest --force 
-brew uninstall speedtest --force
+>> cd ~/anywhere-yml-for-installation
+
+# go to base environment 
+>> conda install -y jupyter 
+>> conda deactivate 
+>> conda env create -f tensorflow-apple-metal.yml -n tensorflow
+>> conda info -e 
+>> conda activate tensorflow
+>> python -m ipykernel install --user --name tensorflow --display-name "Python 3.9 (tensorflow)"
+>> jupyter notebook
+
+# go to his repo copy the code for testing if the GPU is available
 ```
 
-# &#x263b; Necessary Installation
+#### &#x260d; C++
+*&#x23f5; Compile .cpp file and run*
+```
+# full command 
+>> g++ -Wall -std=c++20 xxx.cpp -o run && ./run
 
-### &#x260d; VimTex
+# compiler:                  g++
+# warnings:                  -Wall
+# C++ version:               std=c++20
+# program to compile:        xxx.cpp
+# name your compiled file:   -o run
+# run compiled file:         ./run
+```
+*&#x23f5; SFML Library*
+```
+brew install sfml
+brew info sfml
+
+# find the where sfml folder has beedn downloaded
+# aside from the usual command, two path need to sepcify
+# where is SFML package (I)
+# where is the necessary libraries (L)
+```
+*&#x23f5; Compile SFML (a bit messy)*
+```
+>> g++ test.cpp -Wall -I/[1] -o run -L/[2] -lsfml-graphics -lsfml-window -lsfml-system
+
+# [1]: opt/homebrew/Cellar/sfml/2.5.1_1/include
+# [2]: opt/homebrew/Cellar/sfml/2.5.1_1/lib
+# [?]: you can try build with source, and save the package to somewhere with less name
+```
+   
+    
+#### &#x260d; Java
+*&#x23f5; Download java env*
+```
+# 1. Java (JDK): https://java.com/en/download/help/develop.html
+# 2. Java SE Development Kit: https://www.oracle.com/java/technologies/downloads/
+# 3. restart terminal
+    
+>> javac file.java
+>> java file
+```
+
+#### &#x260d; VimTex
 *&#x23f5; VimTex [repo](https://github.com/lervag/vimtex)* <br>
 *&#x23f5; Guide -> DataSci [repo](https://github.com/mikiya09/DataSci)*
 ```
@@ -496,7 +513,133 @@ cse: Change surrounding environments(change what's in bracket)
 :
 ```
 
-### &#x260d; Window Management 
+
+
+### ➑  IDE
+
+#### &#x260d; vscode
+*&#x23f5; shortcuts* | link: [[1]](https://michaelychen.medium.com/my-experience-using-vim-keybindings-in-vscode-ea6d335aa155)
+[[2]](https://www.youtube.com/watch?v=H2gvHxC9gFY)
+[[3]](https://www.youtube.com/watch?v=fJEbVCrEMSE)
+[[4]](https://www.youtube.com/watch?v=Ljv1ejQQk-U)
+[[5]](https://www.youtube.com/watch?v=zwyHmFxeJtg)
+```
+# vscode => View => Command Palette...  => macos shortcuts
+@ Command Palette                       --> cmd + shift + p
+@ keyboard shortcuts                    --> bottom left setting icon  
+                                        ==> click top-right corner file icon to open keybindings.json
+
+# basic
+• close command palette                 --> [ESC]
+• Open File/Folder                      --> cmd + o
+• Open Recent                           --> cmd + r
+• Run Python File                       --> cmd + enter
+• Toggle Side Bar                       --> cmd + b
+• Open Terminal                         --> ctrl + `
+
+# navigation 
+• resize terminal left                  --> ctrl + shift + h
+• resize terminal down                  --> ctrl + shift + j
+• resize terminal up                    --> ctrl + shift + k 
+• resize terminal right                 --> ctrl + shift + l
+
+# connection 
+• Remote-SSH: Connect to Host...        --> ctrl + shift + c
+```
+*&#x23f5; extension* | [theme](https://www.youtube.com/watch?v=tUUI5hKw0DQ) 
+| [ssh](https://support.cs.wwu.edu/home/survival_guide/tools/VSCode_Jump.html) 
+| [vim](https://www.youtube.com/watch?v=ShfVJ04RHmw) 
+| [turnoff](https://www.youtube.com/watch?v=fmzVJ0Wt29I)
+```
+# "Remote - SSH" Extension
+# 1) Command Palette -> ssh -> + Add New SSH Host.. -> open /Users/mikiyax/.ssh/config
+# 2) Connect to HOST through a jump host, or you can't connect jump host solely
+Host Jump-Host
+    Hostname xxx.xx.xxx.com
+    Port 22
+    User xxx
+    ForwardX11 yes
+    ForwardX11Trusted yes
+  
+Host Destination-Host
+    HostName xxx.xxxxxxx.xxx.com
+    Port 22
+    User xxxxxx
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ProxyJump Jump-Host
+
+Host Use-key 
+    HostName 11.111.111.111 
+    User xxxx 
+    IdentityFile ~/.ssh/xxx.pem
+```
+
+
+
+
+### ➒  Fun Stuff
+
+*&#x23f5; LSCOLORS*
+```
+echo '\n# customize LS-colors (directory) https://geoff.greer.fm/lscolors/' >> ~/.config/zsh/.zshrc 
+echo '# green & unbold' >> ~/.config/zsh/.zshrc 
+echo 'export LSCOLORS=cxfxexdxbxegedabagacac' >> ~/.config/zsh/.zshrc
+```
+
+*&#x23f5; openssl*
+```
+>> brew install openssl
+
+# sometimes openssl@3, follow the tips output from the terminal shell
+# mostly, the terminal output will prompt you to set path variable
+
+echo 'export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"' >> ~/.config/zsh/.zshrc
+echo 'export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"' >> ~/.config/zsh/.zshrc
+echo 'export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"' >> ~/.config/zsh/.zshrc
+```
+*&#x23f5; MacOS control -> [drag windows without titlebar](https://www.mackungfu.org/UsabilityhackClickdraganywhereinmacOSwindowstomovethem)*
+```
+# enable
+>> defaults write -g NSWindowShouldDragOnGesture -bool true
+>> exit
+
+# disable
+>> defaults delete -g NSWindowShouldDragOnGesture
+```
+
+*&#x23f5; for fun*
+```
+brew install numi --cask
+brew install keycastr --cask
+brew install cmatrix
+sudo npm install -g mapscii      # require node.js installed
+brew install cointop
+brew install bpytop 
+brew tap teamookla/speedtest
+brew update
+brew install speedtest --force 
+brew uninstall speedtest --force
+```
+
+### &#x263b; Application
+#### &#x260d; Download
+```
+[OK] chrome
+[OK] zoom.us
+[OK] baidunetdisk
+[OK] notability
+[OK] movist
+[OK] cursor Pro
+[?] xcode (app store)
+[?] The Unarchiver (app store)
+[?] parallels
+[?] istats (cost $9/mo, it's your choice, search from website)
+[?] blender
+[?] weka
+```
+
+#### &#x260d; Window Management 
 *&#x23f5; install [Amethyst](https://github.com/ianyh/Amethyst) and enable accessibility features*
 ```
 brew install --cask amethyst
@@ -548,121 +691,5 @@ brew install --cask amethyst
     >> it's just need to manually specify each time
 ```
 
-### &#x260d; Install Python environment
-*&#x23f5; silicon difference*
-```
-# for apple silicon (arm64)
-
->> brew install miniforge 
->> conda init "$(basename "${SHELL}")"
-```
-
-### &#x260d; Pytorch
-*&#x23f5; same steps from above, checkout 
-Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/blob/pytorch/install/pytorch-install-aug-2022.ipynb) 
-on pytorch branch*
-<br />
-*&#x23f5; download [.yml](./yml/torch-conda-nightly.yml) for pytorch here*
-<br />
-*&#x23f5; check out this [installation](https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c)*
-```
->> cd ~/anywhere-yml-for-installation
-
->> conda deactivate 
->> conda env create -f torch-conda-nightly.yml -n torch
->> conda activate torch
->> python -m ipykernel install --user --name pytorch --display-name "Python 3.9 (pytorch)"
->> jupyter notebook
-# instead of checking GPU, torch is checking MPS, which is (Apple Metal) for GPU*
-```
-*&#x23f5; how to remove ipykernel name*
-```
-# check kernel list 
->> jupyter kernelspec list 
->> jupyter kernelspec uninstall kernel_name
-```
-
-### &#x260d; Tensorflow
-*&#x23f5; check*
-```
->> which python 
-[output]: /opt/homebrew/Caskroom/miniforge/base/bin/python
-```
-*&#x23f5; check out Jeff Heaton's [repo](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install)*
-<br />
-*&#x23f5; download [.yml](./yml/tensorflow-apple-metal.yml) for tensorflow here*
-```
->> cd ~/anywhere-yml-for-installation
-
-# go to base environment 
->> conda install -y jupyter 
->> conda deactivate 
->> conda env create -f tensorflow-apple-metal.yml -n tensorflow
->> conda info -e 
->> conda activate tensorflow
->> python -m ipykernel install --user --name tensorflow --display-name "Python 3.9 (tensorflow)"
->> jupyter notebook
-
-# go to his repo copy the code for testing if the GPU is available
-```
 
 
-### &#x260d; C++
-*&#x23f5; Compile .cpp file and run*
-```
-# full command 
->> g++ -Wall -std=c++20 xxx.cpp -o run && ./run
-
-# compiler:                  g++
-# warnings:                  -Wall
-# C++ version:               std=c++20
-# program to compile:        xxx.cpp
-# name your compiled file:   -o run
-# run compiled file:         ./run
-```
-*&#x23f5; SFML Library*
-```
-brew install sfml
-brew info sfml
-
-# find the where sfml folder has beedn downloaded
-# aside from the usual command, two path need to sepcify
-# where is SFML package (I)
-# where is the necessary libraries (L)
-```
-*&#x23f5; Compile SFML (a bit messy)*
-```
->> g++ test.cpp -Wall -I/[1] -o run -L/[2] -lsfml-graphics -lsfml-window -lsfml-system
-
-# [1]: opt/homebrew/Cellar/sfml/2.5.1_1/include
-# [2]: opt/homebrew/Cellar/sfml/2.5.1_1/lib
-# [?]: you can try build with source, and save the package to somewhere with less name
-```
-   
-    
-### &#x260d; Java
-*&#x23f5; Download java env*
-```
-# 1. Java (JDK): https://java.com/en/download/help/develop.html
-# 2. Java SE Development Kit: https://www.oracle.com/java/technologies/downloads/
-# 3. restart terminal
-    
->> javac file.java
->> java file
-```
-
-# Application
-```
-[OK] chrome
-[OK] zoom.us
-[OK] baidunetdisk
-[OK] notability
-[OK] movist
-[OK] cursor Pro
-[?] xcode (app store)
-[?] The Unarchiver (app store)
-[?] parallels
-[?] istats (cost $9/mo, it's your choice, search from website)
-[?] blender
-[?] weka
-```
