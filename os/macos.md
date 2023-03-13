@@ -535,6 +535,23 @@ cse: Change surrounding environments(change what's in bracket)
 ### ➑  IDE
 
 #### &#x260d; vscode
+
+*&#x23f5; settings*
+```
+@ Open Settings                         --> cmd+, 
+===============
+1) Font Family: SauceCodePro Nerd Font
+2) Font Size: 13
+3) Cursor Style: underline
+
+@ theme
+1) Tokyo Night*
+2) Monokai Pro 
+3) Nord
+=======
+```
+
+
 *&#x23f5; shortcuts* | link: [[1]](https://michaelychen.medium.com/my-experience-using-vim-keybindings-in-vscode-ea6d335aa155)
 [[2]](https://www.youtube.com/watch?v=H2gvHxC9gFY)
 [[3]](https://www.youtube.com/watch?v=fJEbVCrEMSE)
@@ -544,31 +561,50 @@ cse: Change surrounding environments(change what's in bracket)
 # vscode => View => Command Palette...  => macos shortcuts
 @ Command Palette                       --> cmd + shift + p
 @ keyboard shortcuts                    --> bottom left setting icon  
-                                        ==> click top-right corner file icon to open keybindings.json
+                                        ==> click top-right corner file icon to open "keybindings.json"
+                                        ==> also find "~/Library/Application Support/Code/User/keybindings.json"
 
-# basic
+# Basic (Search in Command Palette)
+===================================
 • close command palette                 --> [ESC]
 • Open File/Folder                      --> cmd + o
 • Open Recent                           --> cmd + r
 • Run Python File                       --> cmd + enter
 • Toggle Side Bar                       --> cmd + b
-• Open Terminal                         --> ctrl + `
+• New File                              --> cmd + n
+• Delete File in toggle bar             --> cmd + delete
+• Toggle Terminal                       --> ctrl + t
 
 # navigation 
+============
 • resize terminal left                  --> ctrl + shift + h
 • resize terminal down                  --> ctrl + shift + j
 • resize terminal up                    --> ctrl + shift + k 
 • resize terminal right                 --> ctrl + shift + l
+• navigate editor group                 --> { 
+                                                "key": "ctrl+1", 
+                                                "command": "workbench.action.focusFirstEditorGroup"
+                                            },
+• navigate tabs (1,2,3,n)               --> { 
+                                                "key": "cmd+1", 
+                                                "command": "workbench.action.openEditorAtIndex1" 
+                                            },
+• focus on terminal 
+• focus on editor 
 
 # connection 
+============
 • Remote-SSH: Connect to Host...        --> ctrl + shift + c
 ```
+
+
 *&#x23f5; extension* | [theme](https://www.youtube.com/watch?v=tUUI5hKw0DQ) 
 | [ssh](https://support.cs.wwu.edu/home/survival_guide/tools/VSCode_Jump.html) 
 | [vim](https://www.youtube.com/watch?v=ShfVJ04RHmw) 
 | [turnoff](https://www.youtube.com/watch?v=fmzVJ0Wt29I)
 ```
 # "Remote - SSH" Extension
+# =========================
 # 1) Command Palette -> ssh -> + Add New SSH Host.. -> open /Users/mikiyax/.ssh/config
 # 2) Connect to HOST through a jump host, or you can't connect jump host solely
 Host Jump-Host
@@ -590,6 +626,12 @@ Host Use-key
     HostName 11.111.111.111 
     User xxxx 
     IdentityFile ~/.ssh/xxx.pem
+
+
+# Markdown Preview 
+# ================= 
+# 1) built-in 
+# 2) open .md file, and look for the unique icon on the top right beside run icon
 ```
 
 
