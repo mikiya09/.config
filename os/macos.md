@@ -312,6 +312,23 @@ echo 'export PATH="/opt/homebrew/bin:${PATH}"' >> $HOME/.config/zsh/zsh-exports
 >> npm --version
 ```
 
+*&#x23f5; FTP/SFTP -> [FileZilla](https://filezilla-project.org) -> [Reference](https://www.unixcloudfusion.in/2016/01/using-filezilla-to-connect-ec2-with.html)*
+```
+# SSH File Transfer Protocol (FTP/SFTP)
+
+# 1) normal connection:         Host | Username | Password | Port  
+
+# 2) connect as jump host:      Settings | Generic Proxy | SOCKS 5
+                                |
+                                -> Proxy host: 127.0.0.1 | Proxy port: 8001
+
+# 3) with private key (.pem):   File | Site Manager | New Site 
+                                |                
+                                -> Protocol: select SFTP one -> Host: ip-address 
+                                |
+                                -> Logon Type: Key file -> User -> location of key file
+```
+
 
 ### ➐  Terminal Level
 #### &#x260d; Install Tmux
