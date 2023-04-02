@@ -68,9 +68,15 @@ hover
 ### &#x2468; Keyboard
 **+ input source**
 ```
-• pinyin 
-• do not check "Use the CAPSLOCK key to switch to and from U.S."
-• fn (do nothing)
+1) add pinyin 
+
+2) add Unicode Hex Input 
+    - ∀: option + 2200
+    - ∃: option + 2203
+
+3) do not check "Use the CAPSLOCK key to switch to and from U.S."
+
+4) fn (do nothing)
 
 ! remember that you can switch cmd and alt(option) key if needed
 ```
