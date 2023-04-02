@@ -26,6 +26,14 @@ vim.g.maplocalleader = " "
 
 -- @@@@@@@@@@@@@@@@@@@@ General Keymaps @@@@@@@@@@@@@@@@@@@@@
 
+-- because I am switching to vscode, here are two keymap for saving the file both in INSERT mode and NORMAL mode
+-- Insert Mode --
+keymap("i", "<C-s>", "<ESC>:w<CR>", opts)    
+
+-- Normal Mode -- 
+keymap("n", "<C-s>", ":w<CR>", opts)   
+
+
 -- Cancel / search result highlighting
 -- : ex). /keymap + enter
 -- : all matches will be highlighted, use <leader>nh to cancel out
@@ -71,11 +79,7 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprev<CR>", opts)
 
--- Insert --
--- out of insert mode
-keymap("i", "<C-s>", "<ESC>", opts)    
-
-
+ 
 ---------------------------------------------------------------------------------------------------------------------
 
 

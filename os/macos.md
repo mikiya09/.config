@@ -396,6 +396,20 @@ mkdir xiron
 >> brew install miniforge 
 >> conda init "$(basename "${SHELL}")"
 ```
+
+*&#x23f5; conda command notes*
+```
+# create new env 
+>> conda create -n myenv python=3.x     # python version 
+>> conda create -n myenv scipy          # with sepcific package
+
+# remove conda env 
+>> conda remove --name myenv --all
+
+# install packages using .yml in existing conda env 
+>> conda env update --file xxx.yml 
+```
+
 *&#x23f5; pytorch -> [.yml](./yml/torch-conda-nightly.yml) or this [installation](https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c)* 
 ```
 # refer to Jeff Heaton's github pages, on pytorch branch
@@ -443,6 +457,19 @@ mkdir xiron
 # name your compiled file:   -o run
 # run compiled file:         ./run
 ```
+
+*&#x23f5; Check a GLIBCXX*
+```
+# 1) if you know the file 
+>> strings /usr/lib64/libstdc++.so.6 | grep GLIBCXX 
+
+# 2) check globally 
+>> strings $(g++ -print-file-name=libstdc++.so) | grep GLIBCXX 
+
+# 3) check the path to the 'libstdc++.so' library that was used to compile 'my_program'
+>> ldd my_program | grep libstdc++
+```
+
 *&#x23f5; SFML Library*
 ```
 brew install sfml
@@ -575,8 +602,8 @@ cse: Change surrounding environments(change what's in bracket)
 • Delete File in toggle bar             --> cmd + delete
 • Toggle Terminal                       --> ctrl + t
 
-# navigation 
-============
+# navigation (j and k is used for switching focus, better to use one key)
+=========================================================================
 • resize terminal left                  --> ctrl + shift + h
 • resize terminal down                  --> ctrl + shift + j
 • resize terminal up                    --> ctrl + shift + k 
@@ -589,8 +616,15 @@ cse: Change surrounding environments(change what's in bracket)
                                                 "key": "cmd+1", 
                                                 "command": "workbench.action.openEditorAtIndex1" 
                                             },
-• focus on terminal 
-• focus on editor 
+• focus on terminal                     --> {
+                                                "key": "ctrl+j",
+                                                "command": "workbench.action.terminal.focus"
+                                            },
+• focus on editor                       --> {
+                                                "key": "ctrl+k",
+                                                "command": "workbench.action.focusActiveEditorGroup",
+                                                "when": "terminalFocus" 
+                                            }
 
 # connection 
 ============

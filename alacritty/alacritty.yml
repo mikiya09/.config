@@ -189,13 +189,14 @@ scrolling:
 key_bindings:
 
   # ----------------------------------------------------------------------------------
-  # general keymapping
+  # general keymapping (this mapping could also be done in neovim keymap.lua I assume, because autosave is done at there)
+  # since I switch to vscode, so the keymap configuration file here is no longer valid for my behavior
   # split the current pane left and right: prefix + %
   - { key: N, mods: Command, chars: "\x01\x25" }
   # split the current pane top and down: prefix + "
   - { key: B, mods: Command, chars: "\x01\x22" }
   # Type <escape>:w<enter> == autosave in neovim 
-  - { key: S, mods: Command, chars: "\x1b\x3a\x77\x0a" }
+  - { key: S, mods: Control, chars: "\x1b\x3a\x77\x0a" }
   # rename the current session: prefix + $ 
   - { key: R, mods: Command, chars: "\x01\x24" }  
   # source tmux.conf file
