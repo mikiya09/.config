@@ -1,9 +1,9 @@
-name: torch
+#name: torch
 channels:
   - pytorch-nightly
   - conda-forge
 dependencies:
-    - python=3.9
+    - python=3.10
     - pip>=19.0
     - pytorch 
     - torchvision 
