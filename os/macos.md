@@ -418,6 +418,15 @@ mkdir xiron
 # --prune: this command remove dependencies that are no longer listed in the .yml file
 # --name myenv: sepcify which env to update
 >> conda env update --name myenv --file xxx.yml --prune 
+
+# when you update env using .yml file, few things to notice 
+# 1) comment the "name:" section in the .yml file, 
+#    otherwise it will create another env if name is not the same as the current one
+# 2) newer version will be overrided by older version 
+#    - in my case, if tensorflow is installed with python=3.10, and pytorch is installed with 3.9 
+#    - then tensorflow will be removed after install pytorch using .yml file 
+# 3) newer version is compatible with older version (mostly)
+     - install pytorch with python=3.9, then install tensorflow with python=3.10 if fine
 ```
 
 *&#x23f5; pytorch -> [.yml](./yml/torch-conda-nightly.yml) or this [installation](https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c)* 
@@ -427,9 +436,14 @@ mkdir xiron
 >> cd ~/anywhere-yml-for-installation
 >> conda env create -f torch-conda-nightly.yml -n torch
 >> conda activate torch
->> python -m ipykernel install --user --name pytorch --display-name "Python 3.9 (pytorch)"
+>> python -m ipykernel install --user --name pytorch --display-name "Python 3.10 (pytorch)"
 >> jupyter notebook
+
+# check
 # instead of checking GPU, torch is checking MPS, which is (Apple Metal) for GPU*
+# Target MPS for training, adding the following: 
+>> has_mps = getattr(torch, 'has_mps', False)
+>> device = "mps" if getattr(torch, 'has_mps', False) else "gpu" if torch.cuda.is_available() else "cpu"
 ```
 *&#x23f5; how to remove ipykernel name*
 ```
@@ -448,10 +462,11 @@ mkdir xiron
 >> conda env create -f tensorflow-apple-metal.yml -n tensorflow
 >> conda info -e 
 >> conda activate tensorflow
->> python -m ipykernel install --user --name tensorflow --display-name "Python 3.9 (tensorflow)"
+>> python -m ipykernel install --user --name tensorflow --display-name "Python 3.10 (tensorflow)"
 >> jupyter notebook
 
-# go to his repo copy the code for testing if the GPU is available
+# check 
+>> tf.config.list_physical_devices('GPU')
 ```
 
 #### &#x260d; C++
