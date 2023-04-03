@@ -425,8 +425,8 @@ mkdir xiron
 # 2) newer version will be overrided by older version 
 #    - in my case, if tensorflow is installed with python=3.10, and pytorch is installed with 3.9 
 #    - then tensorflow will be removed after install pytorch using .yml file 
-# 3) newer version is compatible with older version (mostly)
-     - install pytorch with python=3.9, then install tensorflow with python=3.10 if fine
+# 3) newer version is compatible with older version (mostly) 
+#    - install pytorch with python=3.9, then install tensorflow with python=3.10 if fine
 ```
 
 *&#x23f5; pytorch -> [.yml](./yml/torch-conda-nightly.yml) or this [installation](https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c)* 
