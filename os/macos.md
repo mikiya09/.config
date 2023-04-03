@@ -70,13 +70,15 @@ hover
 ```
 1) add pinyin 
 
-2) add Unicode Hex Input 
-    - ∀: option + 2200
-    - ∃: option + 2203
-
-3) do not check "Use the CAPSLOCK key to switch to and from U.S."
+2) do not check "Use the CAPSLOCK key to switch to and from U.S."
 
 4) fn (do nothing)
+
+4) add Unicode Hex Input (optional)
+    - ∀: option + 2200
+    - ∃: option + 2203
+    - ¬: option + 00ac 
+    - ∧: option + 2227 
 
 ! remember that you can switch cmd and alt(option) key if needed
 ```
@@ -413,7 +415,9 @@ mkdir xiron
 >> conda remove --name myenv --all
 
 # install packages using .yml in existing conda env 
->> conda env update --file xxx.yml 
+# --prune: this command remove dependencies that are no longer listed in the .yml file
+# --name myenv: sepcify which env to update
+>> conda env update --name myenv --file xxx.yml --prune 
 ```
 
 *&#x23f5; pytorch -> [.yml](./yml/torch-conda-nightly.yml) or this [installation](https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c)* 
