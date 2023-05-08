@@ -84,6 +84,18 @@ hover
 ```
 
 ### &#x2469; Keyboard Shortcuts
+
+**+ General Shortcuts**
+```
+• Increase Indent (IDE): cmd + ] 
+• Decrease Indent (IDE): cmd + [
+• Move the cursor one word forward: Option + Right Arrow
+• Move the cursor one word backwad: Option + Left Arrow
+
+• Find Path: open finder => cmd + shift + g
+``
+
+
 **+ Mission Control (for no touchpad situation)**
 ```
 • mission Control                       --> ctrl + up
@@ -255,7 +267,8 @@ brew install karabiner-elements --cask
 3) Search for any other combination you want
    {...}
 
-4) All these setting will be saved in karabiner folder in .config
+4) Custom Rule 
+    • open finder => cmd + shift + g: ~/.config/karabiner/assets/complex_modifications
 ```
   
 ### ➎  Nerd Font
