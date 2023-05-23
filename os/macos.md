@@ -93,7 +93,7 @@ hover
 • Move the cursor one word backwad: Option + Left Arrow
 
 • Find Path: open finder => cmd + shift + g
-``
+```
 
 
 **+ Mission Control (for no touchpad situation)**
